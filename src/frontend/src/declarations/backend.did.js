@@ -21,13 +21,21 @@ export const ContactRequest = IDL.Record({
   'timestamp' : Time,
   'phone' : IDL.Text,
 });
+export const UserProfile = IDL.Record({ 'name' : IDL.Text });
 
 export const idlService = IDL.Service({
   '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
   'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
   'getAllContactRequests' : IDL.Func([], [IDL.Vec(ContactRequest)], ['query']),
+  'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
   'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
+  'getUserProfile' : IDL.Func(
+      [IDL.Principal],
+      [IDL.Opt(UserProfile)],
+      ['query'],
+    ),
   'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
+  'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
   'submitContactRequest' : IDL.Func(
       [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
       [],
@@ -51,6 +59,7 @@ export const idlFactory = ({ IDL }) => {
     'timestamp' : Time,
     'phone' : IDL.Text,
   });
+  const UserProfile = IDL.Record({ 'name' : IDL.Text });
   
   return IDL.Service({
     '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
@@ -60,8 +69,15 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Vec(ContactRequest)],
         ['query'],
       ),
+    'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
     'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
+    'getUserProfile' : IDL.Func(
+        [IDL.Principal],
+        [IDL.Opt(UserProfile)],
+        ['query'],
+      ),
     'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
+    'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
     'submitContactRequest' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
         [],

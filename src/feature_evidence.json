@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-why-choose-us-section-implemented-in-frontend-src-components-featuressection-tsx-add-a-new-primary-style-cta-button-labeled-exactly-see-why-choose-us-placed-directly-under-the-paragraph-text-we-provide-exceptional-service-and-unmatched-local-expertise-to-make-your-quer-taro-experience-extraordinary-and-link-the-button-to-https-www-youtube-com-watch-v-68lltmkke6e",
-      "featureTitle": "In the “Why Choose Us” section (implemented in `frontend/src/components/FeaturesSection.tsx`), add a new primary-style CTA button labeled exactly “See Why Choose Us” placed directly under the paragraph text “We provide exceptional service and unmatched local expertise to make your Querétaro experience extraordinary”, and link the button to https://www.youtube.com/watch?v=68lltMKke6E.",
+      "featureId": "feature-create-a-standard-seo-friendly-robots-txt-file-at-frontend-public-robots-txt-that-explicitly-allows-googlebot-bingbot-and-perplexitybot-to-crawl-all-paths-on-the-site-no-disallow-rules",
+      "featureTitle": "Create a standard SEO-friendly `robots.txt` file at `frontend/public/robots.txt` that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths on the site (no disallow rules).",
       "files": [
-        "frontend/src/components/FeaturesSection.tsx"
+        "frontend/public/robots.txt"
       ],
       "components": [
         "authorization@4.0.0",
@@ -16,7 +16,26 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-36"
+        "REQ-37"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-provide-the-final-exact-robots-txt-content-in-the-completion-notes-after-creating-the-file",
+      "featureTitle": "Provide the final, exact `robots.txt` content in the completion notes after creating the file.",
+      "files": [
+        "frontend/public/robots.txt"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-38"
       ],
       "confidence": "high"
     }

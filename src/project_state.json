@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 31,
+  "projectStateVersion": 33,
   "summary": "Build a responsive, modern landing page for myplaceatqueretaro.com (Querétaro real estate/accommodations) with placeholder content, optimized performance, SEO-friendly structure, and cross-device/browser compatibility.",
   "architectural_notes": [
     "Mobile-first responsive design with breakpoints: 320–767 (mobile), 768–1023 (tablet), 1024+ (desktop).",
@@ -274,6 +274,22 @@
         "REQ-36"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-create-a-standard-seo-friendly-robots-txt-file-at-frontend-public-robots-txt-that-explicitly-allows-googlebot-bingbot-and-perplexitybot-to-crawl-all-paths-on-the-site-no-disallow-rules",
+      "title": "Create a standard SEO-friendly `robots.txt` file at `frontend/public/robots.txt` that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths on the site (no disallow rules).",
+      "reqIds": [
+        "REQ-37"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-the-final-exact-robots-txt-content-in-the-completion-notes-after-creating-the-file",
+      "title": "Provide the final, exact `robots.txt` content in the completion notes after creating the file.",
+      "reqIds": [
+        "REQ-38"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -376,6 +392,12 @@
     {
       "id": "AR-27",
       "summary": "Add a new primary-style CTA button labeled “See Why Choose Us” under the specified text in the “Why Choose Us” section, linking to https://www.youtube.com/watch?v=68lltMKke6E.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Add a standard SEO-friendly `robots.txt` file that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths on the site, and provide/show its final content after creation.",
       "reqIds": [],
       "status": "pending"
     }

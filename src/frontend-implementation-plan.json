@@ -1,23 +1,36 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add primary CTA button linking to YouTube in Why Choose Us section",
+  "title": "Add SEO-friendly robots.txt allowing Googlebot, Bingbot, and PerplexityBot on all paths",
   "requirements": [
     {
-      "id": "REQ-36",
-      "summary": "Add a primary-style “See Why Choose Us” CTA button under the Why Choose Us paragraph that links to the specified YouTube URL.",
+      "id": "REQ-37",
+      "summary": "Create a public robots.txt that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths with no disallow rules.",
       "acceptanceCriteria": [
-        "On the rendered page, in the “Why Choose Us” section, a button labeled “See Why Choose Us” appears below the specified paragraph text and above the feature cards grid.",
-        "The new button uses the same styling as the site’s existing primary CTA buttons (visual style consistent with the primary CTA used in the hero).",
-        "Clicking the new button navigates to https://www.youtube.com/watch?v=68lltMKke6E.",
-        "The button remains responsive across the defined breakpoints (mobile 320–767px, tablet 768–1023px, desktop 1024px+) and maintains at least a 44x44px touch target.",
-        "The button has accessible focus styling consistent with other CTAs and does not break existing layout/spacing in the section."
+        "A new file exists at `frontend/public/robots.txt`.",
+        "`robots.txt` contains explicit rules for `User-agent: Googlebot`, `User-agent: Bingbot`, and `User-agent: PerplexityBot` that allow crawling of `/` (e.g., `Allow: /`).",
+        "There are no `Disallow:` rules that block any paths.",
+        "The file is served publicly at `https://<deployed-domain>/robots.txt` in the deployed frontend canister."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/FeaturesSection.tsx",
+          "path": "frontend/public/robots.txt",
+          "operation": "create",
+          "description": "Create a standard SEO-friendly robots.txt with three explicit user-agent blocks (Googlebot, Bingbot, PerplexityBot), each containing `Allow: /`, and no `Disallow:` rules."
+        }
+      ]
+    },
+    {
+      "id": "REQ-38",
+      "summary": "Ensure the exact final robots.txt contents can be provided verbatim in completion notes.",
+      "acceptanceCriteria": [
+        "Completion notes include the full `robots.txt` contents exactly as committed (verbatim, including line breaks)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/robots.txt",
           "operation": "modify",
-          "description": "Insert a new primary-style CTA (label exactly “See Why Choose Us”) directly under the existing paragraph text and above the features grid, linking to https://www.youtube.com/watch?v=68lltMKke6E; reuse the same Tailwind class set as the hero’s primary CTA to ensure consistent styling, focus-visible ring behavior, and min-h-[44px] touch target, while keeping the section responsive and not altering existing copy."
+          "description": "Finalize and verify the committed robots.txt content is exactly what will be pasted verbatim into completion notes (including line breaks), matching the explicit allow rules and containing no disallow rules."
         }
       ]
     }

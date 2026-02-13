@@ -15,6 +15,9 @@ export interface ContactRequest {
     phone: string;
 }
 export type Time = bigint;
+export interface UserProfile {
+    name: string;
+}
 export enum UserRole {
     admin = "admin",
     user = "user",
@@ -23,7 +26,10 @@ export enum UserRole {
 export interface backendInterface {
     assignCallerUserRole(user: Principal, role: UserRole): Promise<void>;
     getAllContactRequests(): Promise<Array<ContactRequest>>;
+    getCallerUserProfile(): Promise<UserProfile | null>;
     getCallerUserRole(): Promise<UserRole>;
+    getUserProfile(user: Principal): Promise<UserProfile | null>;
     isCallerAdmin(): Promise<boolean>;
+    saveCallerUserProfile(profile: UserProfile): Promise<void>;
     submitContactRequest(name: string, email: string, phone: string, message: string): Promise<void>;
 }

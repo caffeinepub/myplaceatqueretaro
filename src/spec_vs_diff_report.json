@@ -1,22 +1,53 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-13T05:32:26.945Z",
-  "summary": "REQ-36 appears implemented by adding a new primary-styled CTA in the Why Choose Us (FeaturesSection) directly under the specified paragraph and above the feature grid, linking to the provided YouTube URL. One extra behavior (opening in a new tab) was introduced that was not explicitly requested.",
-  "missing_requirements": [],
+  "generatedAt": "2026-02-13T05:40:26.752Z",
+  "summary": "Implemented robots.txt with explicit Allow rules for Googlebot, Bingbot, and PerplexityBot, but also introduced unrelated backend and project metadata changes. Cannot verify deployment/serving behavior or completion notes from the diff.",
+  "missing_requirements": [
+    {
+      "id": "REQ-37",
+      "requirement": "The robots.txt file is served publicly at https://<deployed-domain>/robots.txt in the deployed frontend canister.",
+      "reason": "The diff shows the file content was added, but does not provide evidence of deployment configuration or that the asset is actually served at the specified URL.",
+      "evidence": [
+        "frontend/public/robots.txt"
+      ]
+    },
+    {
+      "id": "REQ-38",
+      "requirement": "Provide the final, exact robots.txt content in the completion notes after creating the file (verbatim, including line breaks).",
+      "reason": "Completion notes are not part of the provided diff summary, so there is no evidence this was done.",
+      "evidence": []
+    }
+  ],
   "hallucinated_features": [
     {
-      "description": "CTA link opens YouTube in a new tab via target=\"_blank\" (and adds rel=\"noopener noreferrer\").",
-      "reason": "The requirement only specifies that clicking navigates to the YouTube URL; opening in a new tab is an additional behavior not requested.",
+      "description": "Authorization-related backend behavior changes (contact form publicly accessible, admin checks for viewing requests, user profile permission checks).",
+      "reason": "The BuildRequest is only about adding a frontend robots.txt file and does not request backend authorization or contact/profile logic changes.",
       "evidence": [
-        "frontend/src/components/FeaturesSection.tsx"
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Updates to repository metadata/state files not requested (project_state.json version/summary and frontend-file-summaries listing including robots.txt).",
+      "reason": "The BuildRequest does not ask to modify project tracking/summary files; only to add frontend/public/robots.txt and provide completion notes.",
+      "evidence": [
+        "project_state.json",
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "description": "Added a global catch-all rule 'User-agent: *' with 'Allow: /' in robots.txt.",
+      "reason": "The request only required explicit allow rules for Googlebot, Bingbot, and PerplexityBot; a wildcard allow is not requested (though it does not add restrictions).",
+      "evidence": [
+        "frontend/public/robots.txt"
       ]
     }
   ],
-  "confidence": 0.82,
+  "confidence": 0.78,
   "changed_files": [
+    "backend/main.mo",
     "frontend-file-summaries.txt",
-    "frontend/src/components/FeaturesSection.tsx",
+    "frontend/public/robots.txt",
     "project_state.json"
   ]
 }

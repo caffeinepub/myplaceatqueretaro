@@ -1,34 +1,50 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-13T05:32:26.948Z",
+  "generatedAt": "2026-02-13T05:40:26.755Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 1,
-    "implemented": 1,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-36",
-        "summary": "In the “Why Choose Us” section (implemented in `frontend/src/components/FeaturesSection.tsx`), add a new primary-style CTA button labeled exactly “See Why Choose Us” placed directly under the paragraph text “We provide exceptional service and unmatched local expertise to make your Querétaro experience extraordinary”, and link the button to https://www.youtube.com/watch?v=68lltMKke6E.",
+        "id": "REQ-37",
+        "summary": "Create a standard SEO-friendly `robots.txt` file at `frontend/public/robots.txt` that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths on the site (no disallow rules).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/FeaturesSection.tsx"
+          "frontend/public/robots.txt"
         ],
         "matchedFiles": [
-          "frontend/src/components/FeaturesSection.tsx"
+          "frontend/public/robots.txt"
+        ]
+      },
+      {
+        "id": "REQ-38",
+        "summary": "Provide the final, exact `robots.txt` content in the completion notes after creating the file.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/public/robots.txt"
+        ],
+        "matchedFiles": [
+          "frontend/public/robots.txt"
         ]
       }
     ]
   },
   "changedFiles": [
+    "backend/main.mo",
     "build-request.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/FeaturesSection.tsx",
+    "frontend/public/robots.txt",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

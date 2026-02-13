@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Add a primary-style “See Why Choose Us” CTA button in the “Why Choose Us” section that links to a specified YouTube video.
+**Goal:** Add an SEO-friendly `robots.txt` that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths.
 
 **Planned changes:**
-- Update `frontend/src/components/FeaturesSection.tsx` to render a new primary-style button labeled exactly “See Why Choose Us” directly under the paragraph “We provide exceptional service and unmatched local expertise to make your Querétaro experience extraordinary”.
-- Configure the button to navigate to https://www.youtube.com/watch?v=68lltMKke6E while keeping layout, responsiveness, and accessible focus behavior consistent with existing primary CTAs.
+- Create `frontend/public/robots.txt` with explicit allow rules for `User-agent: Googlebot`, `User-agent: Bingbot`, and `User-agent: PerplexityBot` (allowing `/` with no disallow rules).
+- Ensure the file is publicly served at `/robots.txt` on the deployed site.
 
-**User-visible outcome:** Visitors see a new “See Why Choose Us” button in the “Why Choose Us” section and can click it to open the linked YouTube video.
+**User-visible outcome:** Search engine crawlers (Googlebot, Bingbot, PerplexityBot) can access all site paths, and `/robots.txt` is available publicly.

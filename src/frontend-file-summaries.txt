@@ -14,5 +14,6 @@
   "frontend/src/hooks/useSubmitContactRequest.ts": "Custom hook encapsulating contact form submission logic with loading, success, and error state management, including auto-reset timers for user feedback messages.",
   "frontend/public/.well-known/ic-domains": "Internet Computer custom domain verification file containing the apex and www domain entries for myplaceatqueretaro.com.",
   "frontend/.ic-assets.json": "Asset configuration file that explicitly includes the `.well-known` directory in published frontend canister assets, ensuring `/.well-known/ic-domains` is accessible for custom domain verification.",
-  "frontend/src/components/ScheduleConsultationSection.tsx": "Schedule consultation section with lazy-loaded Calendly inline embed that appears and scrolls into view when the \"Book\" button is clicked, dynamically loading the Calendly widget script only once on first interaction."
+  "frontend/src/components/ScheduleConsultationSection.tsx": "Schedule consultation section with lazy-loaded Calendly inline embed that appears and scrolls into view when the \"Book\" button is clicked, dynamically loading the Calendly widget script only once on first interaction.",
+  "frontend/public/robots.txt": "SEO-friendly robots.txt file that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths with no disallow rules, plus a general allow rule for all other crawlers."
 }
