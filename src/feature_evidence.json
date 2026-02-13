@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-standard-seo-friendly-robots-txt-file-at-frontend-public-robots-txt-that-explicitly-allows-googlebot-bingbot-and-perplexitybot-to-crawl-all-paths-on-the-site-no-disallow-rules",
-      "featureTitle": "Create a standard SEO-friendly `robots.txt` file at `frontend/public/robots.txt` that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths on the site (no disallow rules).",
+      "featureId": "feature-reduce-the-landingheader-visual-height-by-20-across-all-screen-sizes-on-the-current-deployed-version-by-decreasing-the-header-s-minimum-height-and-scaling-the-logo-height-accordingly-while-keeping-layout-and-navigation-functionality-intact",
+      "featureTitle": "Reduce the LandingHeader visual height by 20% across all screen sizes on the current deployed version by decreasing the header’s minimum height and scaling the logo height accordingly, while keeping layout and navigation functionality intact.",
       "files": [
-        "frontend/public/robots.txt"
+        "frontend/src/components/LandingHeader.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -16,26 +16,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-37"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-provide-the-final-exact-robots-txt-content-in-the-completion-notes-after-creating-the-file",
-      "featureTitle": "Provide the final, exact `robots.txt` content in the completion notes after creating the file.",
-      "files": [
-        "frontend/public/robots.txt"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-38"
+        "REQ-1"
       ],
       "confidence": "high"
     }

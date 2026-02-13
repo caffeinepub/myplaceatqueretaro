@@ -1,52 +1,38 @@
 {
   "kind": "build_request",
-  "title": "Add SEO-friendly robots.txt allowing Googlebot, Bingbot, and PerplexityBot on all paths",
+  "title": "Reduce landing header height by 20% across all screen sizes",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-37",
-      "text": "Create a standard SEO-friendly `robots.txt` file at `frontend/public/robots.txt` that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths on the site (no disallow rules).",
+      "id": "REQ-1",
+      "text": "Reduce the LandingHeader visual height by 20% across all screen sizes on the current deployed version by decreasing the header’s minimum height and scaling the logo height accordingly, while keeping layout and navigation functionality intact.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4",
+          "msg-6"
         ],
         "quotes": [
-          "add a standard robots.txt file (SEO-friendly) to allow googlebot, bingbot, PerplexityBot please, and show me the content after it was created",
-          "1. all paths please"
+          "reduce a 20% the full area of the header  please",
+          "1. yes, header height reduced by 20%, 2. all screen sizes and 3. yes"
         ]
       },
       "acceptanceCriteria": [
-        "A new file exists at `frontend/public/robots.txt`.",
-        "`robots.txt` contains explicit rules for `User-agent: Googlebot`, `User-agent: Bingbot`, and `User-agent: PerplexityBot` that allow crawling of `/` (e.g., `Allow: /`).",
-        "There are no `Disallow:` rules that block any paths.",
-        "The file is served publicly at `https://<deployed-domain>/robots.txt` in the deployed frontend canister."
-      ]
-    },
-    {
-      "id": "REQ-38",
-      "text": "Provide the final, exact `robots.txt` content in the completion notes after creating the file.",
-      "target": "unknown",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "and show me the content after it was created"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Completion notes include the full `robots.txt` contents exactly as committed (verbatim, including line breaks)."
+        "In frontend/src/components/LandingHeader.tsx, the header’s primary container min-height values are reduced by ~20% for both base and md breakpoints (currently min-h-[220px] and md:min-h-[260px]).",
+        "The logo image height values are reduced by ~20% for both base and md breakpoints (currently h-[200px] and md:h-[240px]) so the logo remains visually balanced within the smaller header.",
+        "On mobile and desktop, the header remains fixed, navigation buttons remain visible and clickable, and the mobile menu open/close behavior still works.",
+        "Clicking navigation items still scrolls to the correct section with appropriate offset (no section titles hidden behind the header)."
       ]
     }
   ],
   "constraints": [
-    "Do not add any crawl restrictions (no blocked directories or files).",
-    "Do not modify any files under `frontend/src/components/ui` or the immutable hook entrypoints listed in SYSTEM_CONTEXT."
+    "Do not edit any files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT.",
+    "Keep the change limited to header sizing (do not redesign unrelated sections)."
   ],
   "nonGoals": [
-    "Generate or add a `sitemap.xml`.",
-    "Add crawler rules for bots other than Googlebot, Bingbot, and PerplexityBot (unless they are implicitly allowed by a general rule; the requirement is to explicitly allow these three)."
+    "Changing header colors, opacity, shadows, or typography.",
+    "Changing navigation labels/routes or adding/removing menu items.",
+    "Backend changes or state migrations."
   ],
   "imageRequirements": {
     "required": [],

@@ -1,36 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add SEO-friendly robots.txt allowing Googlebot, Bingbot, and PerplexityBot on all paths",
+  "title": "Reduce LandingHeader height by 20% across breakpoints",
   "requirements": [
     {
-      "id": "REQ-37",
-      "summary": "Create a public robots.txt that explicitly allows Googlebot, Bingbot, and PerplexityBot to crawl all paths with no disallow rules.",
+      "id": "REQ-1",
+      "summary": "Reduce the fixed LandingHeader min-height by ~20% on base and md breakpoints and scale the logo height proportionally while keeping navigation and scroll offset behavior intact.",
       "acceptanceCriteria": [
-        "A new file exists at `frontend/public/robots.txt`.",
-        "`robots.txt` contains explicit rules for `User-agent: Googlebot`, `User-agent: Bingbot`, and `User-agent: PerplexityBot` that allow crawling of `/` (e.g., `Allow: /`).",
-        "There are no `Disallow:` rules that block any paths.",
-        "The file is served publicly at `https://<deployed-domain>/robots.txt` in the deployed frontend canister."
+        "In frontend/src/components/LandingHeader.tsx, the header’s primary container min-height values are reduced by ~20% for both base and md breakpoints (currently min-h-[220px] and md:min-h-[260px]).",
+        "The logo image height values are reduced by ~20% for both base and md breakpoints (currently h-[200px] and md:h-[240px]) so the logo remains visually balanced within the smaller header.",
+        "On mobile and desktop, the header remains fixed, navigation buttons remain visible and clickable, and the mobile menu open/close behavior still works.",
+        "Clicking navigation items still scrolls to the correct section with appropriate offset (no section titles hidden behind the header)."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/robots.txt",
-          "operation": "create",
-          "description": "Create a standard SEO-friendly robots.txt with three explicit user-agent blocks (Googlebot, Bingbot, PerplexityBot), each containing `Allow: /`, and no `Disallow:` rules."
-        }
-      ]
-    },
-    {
-      "id": "REQ-38",
-      "summary": "Ensure the exact final robots.txt contents can be provided verbatim in completion notes.",
-      "acceptanceCriteria": [
-        "Completion notes include the full `robots.txt` contents exactly as committed (verbatim, including line breaks)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/public/robots.txt",
+          "path": "frontend/src/components/LandingHeader.tsx",
           "operation": "modify",
-          "description": "Finalize and verify the committed robots.txt content is exactly what will be pasted verbatim into completion notes (including line breaks), matching the explicit allow rules and containing no disallow rules."
+          "description": "Reduce the header container Tailwind min-height utilities by ~20% for base and md breakpoints (e.g., min-h-[220px] -> ~min-h-[176px], md:min-h-[260px] -> ~md:min-h-[208px]) and reduce the logo img height utilities proportionally (e.g., h-[200px] -> ~h-[160px], md:h-[240px] -> ~md:h-[192px]) while leaving structure, fixed positioning, and menu toggling logic unchanged; ensure nav click handlers still close mobile menu and keep all interactive elements visible/clickable."
         }
       ]
     }

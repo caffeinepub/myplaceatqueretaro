@@ -58,6 +58,10 @@ export default {
                 success: {
                     DEFAULT: 'oklch(var(--success))',
                     foreground: 'oklch(var(--success-foreground))'
+                },
+                header: {
+                    DEFAULT: 'oklch(var(--header) / <alpha-value>)',
+                    foreground: 'oklch(var(--header-foreground))'
                 }
             },
             fontFamily: {
