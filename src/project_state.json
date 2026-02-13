@@ -1,0 +1,386 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 31,
+  "summary": "Build a responsive, modern landing page for myplaceatqueretaro.com (Querétaro real estate/accommodations) with placeholder content, optimized performance, SEO-friendly structure, and cross-device/browser compatibility.",
+  "architectural_notes": [
+    "Mobile-first responsive design with breakpoints: 320–767 (mobile), 768–1023 (tablet), 1024+ (desktop).",
+    "Use responsive hamburger navigation on mobile with touch targets >= 44x44px.",
+    "Optimize images (including lazy loading) and prioritize fast page load speed.",
+    "Ensure cross-browser compatibility: Chrome, Safari, Firefox, Edge.",
+    "Use SEO-friendly HTML structure with proper heading hierarchy and placeholder text content.",
+    "Support user-provided brand assets (logo + hero image) with responsive sizing/cropping and optimized delivery (proper formats, compression, and lazy loading where appropriate).",
+    "Logo should be scaled to 5× its current rendered size consistently across mobile, tablet, and desktop breakpoints.",
+    "For custom domain connection, publish domain verification file at public/.well-known/ic-domains (no extension) with one domain per line (myplaceatqueretaro.com and www.myplaceatqueretaro.com).",
+    "To guarantee `/.well-known/ic-domains` is served, add `.ic-assets.json` in the top-level frontend canister directory (same level as `.well-known`) with a rule to include `.well-known` (match: \".well-known\", ignore: false).",
+    "Contact form submissions should be handled via Formspree (https://formspree.io/f/xkgelwgw) instead of the Motoko backend; keep the same fields (name, email, phone, message) and use Formspree’s default success/error behavior."
+  ],
+  "known_issues": [
+    "Custom domain verification may fail if `/.well-known/ic-domains` is not accessible; ensure asset publishing includes `.well-known` via `.ic-assets.json`."
+  ],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-mobile-first-responsive-landing-page-for-myplaceatqueretaro-com-with-sections-header-logo-placeholder-top-left-responsive-nav-with-hamburger-on-mobile-contact-cta-hero-full-width-hero-image-placeholder-headline-subtitle-primary-cta-features-services-3-4-highlights-with-icons-and-short-descriptions-about-business-quer-taro-info-trust-indicators-contact-contact-form-business-details-social-links-and-footer-copyright-privacy-terms-placeholder-links-secondary-nav",
+      "title": "Create a single-page, mobile-first responsive landing page for “myplaceatqueretaro.com” with sections: Header (logo placeholder top-left, responsive nav with hamburger on mobile, Contact CTA), Hero (full-width hero image placeholder, headline, subtitle, primary CTA), Features/Services (3–4 highlights with icons and short descriptions), About (business + Querétaro info + trust indicators), Contact (contact form + business details + social links), and Footer (copyright, privacy/terms placeholder links, secondary nav).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-responsive-behavior-exactly-at-these-breakpoints-mobile-320-767px-tablet-768-1023px-desktop-1024px-ensuring-smooth-transitions-between-breakpoints-and-touch-friendly-interactions-minimum-44x44px-touch-targets-for-buttons-and-key-nav-items",
+      "title": "Implement responsive behavior exactly at these breakpoints: mobile (320–767px), tablet (768–1023px), desktop (1024px+), ensuring smooth transitions between breakpoints and touch-friendly interactions (minimum 44x44px touch targets for buttons and key nav items).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-consistent-visual-theme-colors-typography-spacing-component-styling-that-is-clean-and-modern-aligned-with-a-quer-taro-real-estate-accommodations-brand-and-designed-to-complement-an-uploaded-logo-enforce-this-design-system-consistently-across-all-sections-and-ui-states-hover-focus-active",
+      "title": "Define and apply a consistent visual theme (colors, typography, spacing, component styling) that is clean and modern, aligned with a Querétaro real estate/accommodations brand, and designed to complement an uploaded logo; enforce this design system consistently across all sections and UI states (hover/focus/active).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-optimize-for-performance-use-optimized-image-handling-and-lazy-loading-for-non-critical-images-keep-assets-lightweight-and-ensure-fast-initial-load-while-maintaining-visual-quality",
+      "title": "Optimize for performance: use optimized image handling and lazy loading for non-critical images, keep assets lightweight, and ensure fast initial load while maintaining visual quality.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-seo-friendly-structure-and-accessibility-fundamentals-correct-heading-hierarchy-single-h1-logical-h2-h3-semantic-landmarks-header-nav-main-section-footer-descriptive-link-button-labels-and-accessible-form-labeling",
+      "title": "Implement SEO-friendly structure and accessibility fundamentals: correct heading hierarchy (single H1, logical H2/H3), semantic landmarks (header/nav/main/section/footer), descriptive link/button labels, and accessible form labeling.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-cross-browser-compatibility-for-chrome-safari-firefox-and-edge-on-windows-desktop-android-and-ios-by-avoiding-browser-specific-features-without-fallbacks-and-validating-core-interactions-nav-scrolling-form",
+      "title": "Ensure cross-browser compatibility for Chrome, Safari, Firefox, and Edge on Windows desktop, Android, and iOS by avoiding browser-specific features without fallbacks and validating core interactions (nav, scrolling, form).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-contact-form-ui-with-fields-name-email-phone-message-include-basic-client-side-validation-required-fields-email-format-and-a-clear-submission-success-error-state-keep-copy-as-placeholder-text",
+      "title": "Build the Contact form UI with fields: name, email, phone, message; include basic client-side validation (required fields, email format) and a clear submission success/error state. Keep copy as placeholder text.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-frontend-contact-form-submission-to-the-backend-canister-endpoint-using-the-existing-actor-setup-and-handle-loading-error-states-gracefully-without-page-reload",
+      "title": "Wire the frontend Contact form submission to the backend canister endpoint using the existing actor setup, and handle loading/error states gracefully without page reload.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-uploaded-logo-image-file-logo-myplace-moslygraytransparent-1-png-as-the-site-logo-in-the-header-replacing-the-current-mp-placeholder-block-while-preserving-the-existing-header-layout-navigation-behavior-and-accessibility",
+      "title": "Add the uploaded logo image file \"Logo_Myplace_moslygraytransparent-1.png\" as the site logo in the header, replacing the current \"MP\" placeholder block while preserving the existing header layout, navigation behavior, and accessibility.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-uploaded-hero-image-file-hero-day-of-the-dead-mexican-tradition-dim-1920x1080-1-png-as-the-hero-background-image-in-the-hero-section-replacing-the-current-placeholder-background-while-maintaining-readable-foreground-text-across-breakpoints",
+      "title": "Use the uploaded hero image file \"hero-day-of-the-dead-mexican-tradition.dim_1920x1080-1.png\" as the hero background image in the Hero section, replacing the current placeholder background while maintaining readable foreground text across breakpoints.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-two-uploaded-images-as-frontend-static-assets-and-reference-them-via-stable-public-urls-from-the-header-and-hero-components",
+      "title": "Add the two uploaded images as frontend static assets and reference them via stable public URLs from the header and hero components.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-increase-the-rendered-size-of-the-header-logo-image-assets-logo-myplace-moslygraytransparent-1-png-to-5-its-current-size-across-all-responsive-breakpoints-mobile-320-767px-tablet-768-1023px-desktop-1024px-while-preserving-the-existing-header-layout-sticky-behavior-nav-hamburger-behavior-spacing-and-accessibility",
+      "title": "Increase the rendered size of the header logo image (\"/assets/Logo_Myplace_moslygraytransparent-1.png\") to 5× its current size across all responsive breakpoints (mobile 320–767px, tablet 768–1023px, desktop 1024px+), while preserving the existing header layout (sticky behavior, nav/hamburger behavior), spacing, and accessibility.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-internet-computer-custom-domain-verification-file-at-frontend-public-well-known-ic-domains-a-file-with-no-extension-containing-exactly-two-lines-myplaceatqueretaro-com-and-www-myplaceatqueretaro-com",
+      "title": "Add an Internet Computer custom domain verification file at `frontend/public/.well-known/ic-domains` (a file with no extension) containing exactly two lines: `myplaceatqueretaro.com` and `www.myplaceatqueretaro.com`.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-file-named-ic-assets-json-in-the-top-level-frontend-canister-directory-frontend-same-level-as-public-with-exactly-the-following-json-content-including-the-array-and-fields-so-that-the-well-known-directory-is-not-ignored-during-asset-publishing-match-well-known-ignore-false-after-this-change-the-deployed-frontend-canister-must-publicly-serve-the-existing-verification-file-at-well-known-ic-domains",
+      "title": "Create a file named `.ic-assets.json` in the top-level frontend canister directory (`frontend/`, same level as `public/`) with exactly the following JSON content (including the array and fields) so that the `.well-known` directory is not ignored during asset publishing:\n\n[\n  {\n    \"match\": \".well-known\",\n    \"ignore\": false\n  }\n]\n\nAfter this change, the deployed frontend canister must publicly serve the existing verification file at `/.well-known/ic-domains`.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-contact-get-in-touch-section-change-the-displayed-contact-email-address-from-info-myplaceatqueretaro-com-to-contactus-myplaceatqueretaro-com-and-also-update-the-underlying-mailto-link-to-use-mailto-contactus-myplaceatqueretaro-com",
+      "title": "In the Contact (\"Get in Touch\") section, change the displayed contact email address from \"info@myplaceatqueretaro.com\" to \"contactus@myplaceatqueretaro.com\", and also update the underlying mailto link to use \"mailto:contactus@myplaceatqueretaro.com\".",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-contact-get-in-touch-section-change-the-phone-number-from-52-442-123-4567-to-52-442-232-1248-everywhere-it-appears-including-both-the-visible-phone-number-text-and-any-underlying-clickable-tel-link",
+      "title": "In the Contact (\"Get in Touch\") section, change the phone number from \"+52 (442) 123 4567\" to \"+52 (442)  232 1248\" everywhere it appears, including both the visible phone number text and any underlying clickable `tel:` link.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-contact-form-to-submit-directly-to-formspree-using-the-endpoint-https-formspree-io-f-xkgelwgw-replacing-the-current-submission-to-the-motoko-backend-canister-entirely",
+      "title": "Update the Contact form to submit directly to Formspree using the endpoint https://formspree.io/f/xkgelwgw, replacing the current submission to the Motoko backend canister entirely.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-formspree-s-default-behavior-for-submission-native-form-submit-redirect-handled-by-formspree-and-remove-the-existing-custom-async-submission-handling-ui-states-tied-to-the-backend-loading-spinner-in-place-success-banner-in-place-error-banner",
+      "title": "Use Formspree’s default behavior for submission (native form submit/redirect handled by Formspree), and remove the existing custom async submission handling UI states tied to the backend (loading spinner, in-place success banner, in-place error banner).",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-the-contact-form-fields-exactly-the-same-name-email-phone-message-when-sending-to-formspree-preserving-their-labels-and-required-nature",
+      "title": "Keep the Contact form fields exactly the same (name, email, phone, message) when sending to Formspree, preserving their labels and required nature.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-or-refactor-any-frontend-code-paths-that-are-now-unused-due-to-the-formspree-integration-e-g-the-hook-that-submits-through-the-backend-actor-ensuring-the-frontend-builds-cleanly-without-unused-imports-or-dead-code-related-to-backend-contact-submission",
+      "title": "Remove or refactor any frontend code paths that are now unused due to the Formspree integration (e.g., the hook that submits through the backend actor), ensuring the frontend builds cleanly without unused imports or dead code related to backend contact submission.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-rename-the-contact-section-heading-from-get-in-touch-to-book-while-keeping-the-rest-of-the-contact-section-content-and-formspree-contact-form-unchanged",
+      "title": "Rename the Contact section heading from \"Get in Touch\" to \"Book\" while keeping the rest of the Contact section content and Formspree contact form unchanged.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-header-cta-button-label-from-get-in-touch-to-book-desktop-and-mobile-header-variants-and-change-its-click-behavior-to-scroll-to-the-new-schedule-your-free-consultation-section-instead-of-scrolling-to-the-contact-section",
+      "title": "Update the header CTA button label from \"Get in Touch\" to \"Book\" (desktop and mobile header variants) and change its click behavior to scroll to the new \"Schedule your free consultation\" section instead of scrolling to the Contact section.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-section-titled-schedule-your-free-consultation-placed-after-the-existing-contact-section-and-before-the-footer-this-section-must-include-the-exact-body-text-prefer-to-book-directly-use-our-calendar-below-to-schedule-a-consultation-at-your-convenience",
+      "title": "Create a new section titled \"Schedule your free consultation\" placed after the existing Contact section and before the Footer. This section must include the exact body text: \"Prefer to book directly? Use our calendar below to schedule a consultation at your convenience.\"",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-new-schedule-your-free-consultation-section-duplicate-the-current-cta-button-same-styling-as-a-book-button-and-ensure-it-is-functional-e-g-scrolls-to-the-calendar-area-within-the-new-section",
+      "title": "In the new \"Schedule your free consultation\" section, duplicate the current CTA button (same styling) as a \"Book\" button, and ensure it is functional (e.g., scrolls to the calendar area within the new section).",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-visible-responsive-calendar-placeholder-region-within-the-new-schedule-your-free-consultation-section-no-third-party-calendar-integration-or-external-embed-url-required",
+      "title": "Add a visible, responsive calendar placeholder region within the new \"Schedule your free consultation\" section (no third-party calendar integration or external embed URL required).",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-main-heading-text-in-the-contact-section-the-large-h2-at-the-top-of-the-section-in-frontend-src-components-contactsection-tsx-from-book-to-contact-us-changing-only-that-heading-text-and-leaving-all-other-content-ids-layout-styling-and-behaviors-unchanged",
+      "title": "Update the main heading text in the Contact section (the large H2 at the top of the section in `frontend/src/components/ContactSection.tsx`) from \"Book\" to \"Contact us\", changing only that heading text and leaving all other content, IDs, layout, styling, and behaviors unchanged.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-existing-calendar-placeholder-region-inside-frontend-src-components-scheduleconsultationsection-tsx-with-a-calendly-inline-embed-that-uses-the-user-provided-embed-configuration-for-https-calendly-com-myplaceatqueretaro-discovery-call-including-the-same-inline-styles-min-width-320px-height-700px-and-the-required-calendly-widget-script-https-assets-calendly-com-assets-external-widget-js",
+      "title": "Replace the existing calendar placeholder region inside `frontend/src/components/ScheduleConsultationSection.tsx` with a Calendly inline embed that uses the user-provided embed configuration for `https://calendly.com/myplaceatqueretaro/discovery-call`, including the same inline styles (`min-width:320px;height:700px;`) and the required Calendly widget script (`https://assets.calendly.com/assets/external/widget.js`).",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-the-existing-book-button-in-the-schedule-your-free-consultation-section-update-its-click-behavior-so-that-a-the-calendly-embed-is-only-displayed-loaded-after-clicking-the-button-and-b-after-clicking-the-button-the-page-smoothly-scrolls-to-the-calendly-embed-region-not-the-old-placeholder-id",
+      "title": "Keep the existing \"Book\" button in the “Schedule your free consultation” section; update its click behavior so that (a) the Calendly embed is only displayed/loaded after clicking the button, and (b) after clicking the button the page smoothly scrolls to the Calendly embed region (not the old placeholder ID).",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-components-aboutsection-tsx-replace-the-existing-right-column-about-section-image-placeholder-the-block-currently-showing-the-placeholder-ui-with-an-img-that-renders-about-us-image-jpg-at-full-width-height-within-the-existing-placeholder-area-with-no-additional-visible-text-added",
+      "title": "In `frontend/src/components/AboutSection.tsx`, replace the existing right-column About section image placeholder (the block currently showing the placeholder UI) with an `<img>` that renders `about-us-image.jpg` at full width/height within the existing placeholder area, with no additional visible text added.",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-components-aboutsection-tsx-replace-the-current-right-column-about-image-placeholder-the-block-next-to-the-heading-your-gateway-to-quer-taro-living-with-an-img-that-renders-about-us-image-jpg-at-full-width-height-within-the-existing-placeholder-area-with-no-additional-visible-text-added",
+      "title": "In `frontend/src/components/AboutSection.tsx`, replace the current right-column About image placeholder (the block next to the heading “Your Gateway to Querétaro Living”) with an `<img>` that renders `about-us-image.jpg` at full width/height within the existing placeholder area, with no additional visible text added.",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-contact-section-s-follow-us-social-links-implemented-in-frontend-src-components-contactsection-tsx-keep-all-existing-social-links-visible-and-unchanged-except-for-the-facebook-link-which-must-be-updated-to-use-exactly-https-www-facebook-com-myplaceatqueretaro",
+      "title": "In the Contact section’s “Follow Us” social links (implemented in `frontend/src/components/ContactSection.tsx`), keep all existing social links visible and unchanged except for the Facebook link, which must be updated to use exactly `https://www.facebook.com/MyPlaceAtQueretaro`.",
+      "reqIds": [
+        "REQ-35"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-the-why-choose-us-section-implemented-in-frontend-src-components-featuressection-tsx-add-a-new-primary-style-cta-button-labeled-exactly-see-why-choose-us-placed-directly-under-the-paragraph-text-we-provide-exceptional-service-and-unmatched-local-expertise-to-make-your-quer-taro-experience-extraordinary-and-link-the-button-to-https-www-youtube-com-watch-v-68lltmkke6e",
+      "title": "In the “Why Choose Us” section (implemented in `frontend/src/components/FeaturesSection.tsx`), add a new primary-style CTA button labeled exactly “See Why Choose Us” placed directly under the paragraph text “We provide exceptional service and unmatched local expertise to make your Querétaro experience extraordinary”, and link the button to https://www.youtube.com/watch?v=68lltMKke6E.",
+      "reqIds": [
+        "REQ-36"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a fully responsive landing page for myplaceatqueretaro.com with header/nav (hamburger on mobile), hero, features/services, about, contact form/details/social links, and footer; optimized, SEO-friendly, and cross-browser compatible.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Integrate the user-provided logo image into the header and set the user-provided hero image in the hero section (e.g., as background/primary hero image), ensuring responsive behavior and proper image optimization.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Increase the header logo displayed size to 5× its current rendered size across all breakpoints (mobile/tablet/desktop), preserving existing header layout/navigation and accessibility.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add Internet Computer custom domain verification file at public/.well-known/ic-domains containing lines: myplaceatqueretaro.com and www.myplaceatqueretaro.com.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Ensure the static asset path `/.well-known/ic-domains` is publicly accessible in the deployed frontend canister by adding a `.ic-assets.json` file in the top-level frontend canister directory (same level as `.well-known`) that explicitly includes `.well-known` in asset publishing.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Update the “Get in Touch” section contact email from info@myplaceatqueretaro.com to contactus@myplaceatqueretaro.com, changing both the visible text and the underlying mailto link.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Update the “Get in Touch” section phone number from “+52 (442) 123 4567” to “+52 (442) 232 1248” everywhere it appears, including both visible text and any underlying tel: link.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Replace the Contact form’s backend canister submission with a Formspree integration using endpoint https://formspree.io/f/xkgelwgw; keep existing fields (name, email, phone, message) and use Formspree’s default submission behavior so messages are delivered to contactus@myplaceatqueretaro.com.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Create a new section titled “Schedule your free consultation” placed after the existing Contact section and before the Footer; include the text “Prefer to book directly? Use our calendar below to schedule a consultation at your convenience.” and duplicate the current CTA button within this section.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Rename the current Contact section title (currently “Book”) to “Contact us”, changing only the heading above the contact information (no other content/behavior changes).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Integrate a Calendly inline embed (https://calendly.com/myplaceatqueretaro/discovery-call) into the “Schedule your free consultation” section: replace the existing calendar placeholder region with the Calendly widget, keep the “Book” button, and on click scroll to the embed and only then display/load the Calendly widget.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Add the uploaded image file `about-us-image.jpg` to the frontend static assets so it can be referenced via a stable public URL (e.g., under `frontend/public/assets/`).",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Add the uploaded image file `about-us-image.jpg` to the frontend’s publicly served static assets (under `frontend/public/assets/`) so it is accessible via a stable URL (e.g., `/assets/about-us-image.jpg`).",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Produce an updated draft build/deployment of the site so the user can review the About section image change.",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Update the Facebook social link URL in the Footer/“Follow us” section to https://www.facebook.com/MyPlaceAtQueretaro while keeping all other existing social links unchanged.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Add a new primary-style CTA button labeled “See Why Choose Us” under the specified text in the “Why Choose Us” section, linking to https://www.youtube.com/watch?v=68lltMKke6E.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "myplaceatqueretaro",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "build_request",
+  "title": "Add primary-style 'See Why Choose Us' button linking to YouTube in Why Choose Us section",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-36",
+      "text": "In the “Why Choose Us” section (implemented in `frontend/src/components/FeaturesSection.tsx`), add a new primary-style CTA button labeled exactly “See Why Choose Us” placed directly under the paragraph text “We provide exceptional service and unmatched local expertise to make your Querétaro experience extraordinary”, and link the button to https://www.youtube.com/watch?v=68lltMKke6E.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Please help me to create a new  button with the name:  \"See Why Choose Us\" and please link to this youtube  video: \" https://www.youtube.com/watch?v=68lltMKke6E\". It should be placed under “Why Choose Us” section, just under the text: “We provide exceptional service and unmatched local expertise to make your Querétaro experience extraordinary”",
+          "1. same styling as the primary CTA buttons"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On the rendered page, in the “Why Choose Us” section, a button labeled “See Why Choose Us” appears below the specified paragraph text and above the feature cards grid.",
+        "The new button uses the same styling as the site’s existing primary CTA buttons (visual style consistent with the primary CTA used in the hero).",
+        "Clicking the new button navigates to https://www.youtube.com/watch?v=68lltMKke6E.",
+        "The button remains responsive across the defined breakpoints (mobile 320–767px, tablet 768–1023px, desktop 1024px+) and maintains at least a 44x44px touch target.",
+        "The button has accessible focus styling consistent with other CTAs and does not break existing layout/spacing in the section."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under `frontend/src/components/ui` (read-only UI component sources).",
+    "Do not edit any paths listed as immutable in SYSTEM_CONTEXT.",
+    "No backend changes are required for this change."
+  ],
+  "nonGoals": [
+    "Do not embed the YouTube video on the page (link-only button).",
+    "Do not change any existing text content in the “Why Choose Us” section aside from adding the new button.",
+    "Do not add new navigation items or new sections to the page as part of this change."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

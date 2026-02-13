@@ -1,0 +1,25 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add primary CTA button linking to YouTube in Why Choose Us section",
+  "requirements": [
+    {
+      "id": "REQ-36",
+      "summary": "Add a primary-style “See Why Choose Us” CTA button under the Why Choose Us paragraph that links to the specified YouTube URL.",
+      "acceptanceCriteria": [
+        "On the rendered page, in the “Why Choose Us” section, a button labeled “See Why Choose Us” appears below the specified paragraph text and above the feature cards grid.",
+        "The new button uses the same styling as the site’s existing primary CTA buttons (visual style consistent with the primary CTA used in the hero).",
+        "Clicking the new button navigates to https://www.youtube.com/watch?v=68lltMKke6E.",
+        "The button remains responsive across the defined breakpoints (mobile 320–767px, tablet 768–1023px, desktop 1024px+) and maintains at least a 44x44px touch target.",
+        "The button has accessible focus styling consistent with other CTAs and does not break existing layout/spacing in the section."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FeaturesSection.tsx",
+          "operation": "modify",
+          "description": "Insert a new primary-style CTA (label exactly “See Why Choose Us”) directly under the existing paragraph text and above the features grid, linking to https://www.youtube.com/watch?v=68lltMKke6E; reuse the same Tailwind class set as the hero’s primary CTA to ensure consistent styling, focus-visible ring behavior, and min-h-[44px] touch target, while keeping the section responsive and not altering existing copy."
+        }
+      ]
+    }
+  ]
+}

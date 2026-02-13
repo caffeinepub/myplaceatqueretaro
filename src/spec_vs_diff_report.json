@@ -1,0 +1,22 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T05:32:26.945Z",
+  "summary": "REQ-36 appears implemented by adding a new primary-styled CTA in the Why Choose Us (FeaturesSection) directly under the specified paragraph and above the feature grid, linking to the provided YouTube URL. One extra behavior (opening in a new tab) was introduced that was not explicitly requested.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "CTA link opens YouTube in a new tab via target=\"_blank\" (and adds rel=\"noopener noreferrer\").",
+      "reason": "The requirement only specifies that clicking navigates to the YouTube URL; opening in a new tab is an additional behavior not requested.",
+      "evidence": [
+        "frontend/src/components/FeaturesSection.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/FeaturesSection.tsx",
+    "project_state.json"
+  ]
+}

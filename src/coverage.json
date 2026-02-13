@@ -1,0 +1,37 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T05:32:26.948Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-36",
+        "summary": "In the “Why Choose Us” section (implemented in `frontend/src/components/FeaturesSection.tsx`), add a new primary-style CTA button labeled exactly “See Why Choose Us” placed directly under the paragraph text “We provide exceptional service and unmatched local expertise to make your Querétaro experience extraordinary”, and link the button to https://www.youtube.com/watch?v=68lltMKke6E.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/FeaturesSection.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/FeaturesSection.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/FeaturesSection.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
