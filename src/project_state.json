@@ -1,14 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "New project",
+  "summary": "Update the website/footer \"Follow us\" section: replace the \"X\" social link with a YouTube link.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-in-the-hero-section-component-change-the-text-color-of-the-sentence-experience-exceptional-accommodations-and-real-estate-services-in-one-of-mexico-s-most-beautiful-colonial-cities-to-white-and-ensure-this-color-change-applies-only-within-the-hero-section",
-      "title": "In the hero section component, change the text color of the sentence “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” to white, and ensure this color change applies only within the hero section.",
+      "id": "feature-in-the-follow-us-social-links-section-of-the-contact-page-frontend-src-components-contactsection-tsx-remove-the-existing-x-twitter-social-link-and-replace-it-with-a-youtube-social-link-that-points-to-this-exact-url-https-youtube-com-myplaceatqueretaro-si-fi8rt31wp4dxlmy2",
+      "title": "In the \"Follow Us\" social links section of the Contact page (frontend/src/components/ContactSection.tsx), remove the existing \"X\" (Twitter) social link and replace it with a YouTube social link that points to this exact URL: https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2.",
       "reqIds": [
         "REQ-1"
       ],
@@ -18,12 +18,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Change hero section sentence text color to white (only in hero section)",
+      "summary": "Replace the \"X\" link in the \"Follow us\" section with a YouTube link pointing to https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Set hero section tagline text color to white",
+  "projectName": "Replace X social link with YouTube in Follow Us section",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

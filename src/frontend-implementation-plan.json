@@ -1,21 +1,23 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Set hero section tagline text color to white",
+  "title": "Replace X social link with YouTube in Contact Follow Us section",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Change the hero section tagline sentence text color to white without affecting any other styling or occurrences elsewhere.",
+      "summary": "Replace the X (Twitter) social icon/link in the Contact page Follow Us section with a YouTube icon/link to the provided channel URL, keeping styling and accessibility intact.",
       "acceptanceCriteria": [
-        "On the landing page hero section, the specified sentence renders in white text.",
-        "No other instances of the same sentence (if present elsewhere) change color as a result of this update.",
-        "No other hero section styling (font size, spacing, shadows, etc.) is changed beyond the text color."
+        "The \"Follow Us\" row no longer includes an item labeled \"X\" / \"X (Twitter)\" and does not render the X icon.",
+        "A YouTube icon/link is present in the same position/group as the other social icons.",
+        "Clicking the YouTube icon opens https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2 in a new tab.",
+        "The YouTube link uses safe external link attributes (target=\"_blank\" and rel=\"noopener noreferrer\").",
+        "The YouTube link has an accessible aria-label indicating \"YouTube\" (or equivalent clear label)."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/src/components/ContactSection.tsx",
           "operation": "modify",
-          "description": "Update only the <p> element that contains “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” to use a white text utility (e.g., replace the existing text color class with a white text class) so the change is scoped to the hero section and does not alter any other styles."
+          "description": "Update the Follow Us socialLinks array to remove the existing X (Twitter) item and add a YouTube item pointing to https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2; replace the SiX import with the appropriate YouTube icon import from react-icons/si, ensure aria-label is clearly \"YouTube\", and preserve existing link attributes (target=\"_blank\" and rel=\"noopener noreferrer\") and styling/hover/focus behavior."
         }
       ]
     }

@@ -1,35 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Set hero section tagline text color to white",
+  "title": "Replace X social link with YouTube in Follow Us section",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In the hero section component, change the text color of the sentence “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” to white, and ensure this color change applies only within the hero section.",
+      "text": "In the \"Follow Us\" social links section of the Contact page (frontend/src/components/ContactSection.tsx), remove the existing \"X\" (Twitter) social link and replace it with a YouTube social link that points to this exact URL: https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "recent-messages-3",
-          "recent-messages-5"
+          "msg-6",
+          "msg-8"
         ],
         "quotes": [
-          "change the text color of the sentence: \"Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities\" to white",
-          "1. hero section. 2. only in that section and 3. just the color change"
+          "in the same section (Follow us), please remove the \"X\" link for such social media, since i do not have a channel there.",
+          "with YouTube please and linked to \" https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2\""
         ]
       },
       "acceptanceCriteria": [
-        "On the landing page hero section, the specified sentence renders in white text.",
-        "No other instances of the same sentence (if present elsewhere) change color as a result of this update.",
-        "No other hero section styling (font size, spacing, shadows, etc.) is changed beyond the text color."
+        "The \"Follow Us\" row no longer includes an item labeled \"X\" / \"X (Twitter)\" and does not render the X icon.",
+        "A YouTube icon/link is present in the same position/group as the other social icons.",
+        "Clicking the YouTube icon opens https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2 in a new tab.",
+        "The YouTube link uses safe external link attributes (target=\"_blank\" and rel=\"noopener noreferrer\").",
+        "The YouTube link has an accessible aria-label indicating \"YouTube\" (or equivalent clear label)."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/components/ui or other immutablePaths listed in SYSTEM_CONTEXT."
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Do not introduce additional backend services or external databases; this change must be frontend-only."
   ],
   "nonGoals": [
-    "Do not change the hero background image, gradient overlay, buttons, header, or any other page section styling.",
-    "Do not introduce new themes, typography changes, or additional styling adjustments beyond the requested text color change."
+    "Do not change any other social links (e.g., Facebook, Instagram) beyond replacing the X link.",
+    "Do not redesign the Contact section layout or styling; keep existing spacing, sizing, and hover/focus behavior.",
+    "Do not add or change backend logic; no Motoko changes required."
   ],
   "imageRequirements": {
     "required": [],

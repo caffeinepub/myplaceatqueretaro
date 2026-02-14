@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-hero-section-component-change-the-text-color-of-the-sentence-experience-exceptional-accommodations-and-real-estate-services-in-one-of-mexico-s-most-beautiful-colonial-cities-to-white-and-ensure-this-color-change-applies-only-within-the-hero-section",
-      "featureTitle": "In the hero section component, change the text color of the sentence “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” to white, and ensure this color change applies only within the hero section.",
+      "featureId": "feature-in-the-follow-us-social-links-section-of-the-contact-page-frontend-src-components-contactsection-tsx-remove-the-existing-x-twitter-social-link-and-replace-it-with-a-youtube-social-link-that-points-to-this-exact-url-https-youtube-com-myplaceatqueretaro-si-fi8rt31wp4dxlmy2",
+      "featureTitle": "In the \"Follow Us\" social links section of the Contact page (frontend/src/components/ContactSection.tsx), remove the existing \"X\" (Twitter) social link and replace it with a YouTube social link that points to this exact URL: https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2.",
       "files": [
-        "frontend/src/components/HeroSection.tsx"
+        "frontend/src/components/ContactSection.tsx"
       ],
       "components": [
         "authorization@4.0.0",
