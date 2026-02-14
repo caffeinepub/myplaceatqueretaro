@@ -7,8 +7,8 @@
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-reduce-the-landingheader-visual-height-by-20-across-all-screen-sizes-on-the-current-deployed-version-by-decreasing-the-header-s-minimum-height-and-scaling-the-logo-height-accordingly-while-keeping-layout-and-navigation-functionality-intact",
-      "title": "Reduce the LandingHeader visual height by 20% across all screen sizes on the current deployed version by decreasing the header’s minimum height and scaling the logo height accordingly, while keeping layout and navigation functionality intact.",
+      "id": "feature-in-the-hero-section-component-change-the-text-color-of-the-sentence-experience-exceptional-accommodations-and-real-estate-services-in-one-of-mexico-s-most-beautiful-colonial-cities-to-white-and-ensure-this-color-change-applies-only-within-the-hero-section",
+      "title": "In the hero section component, change the text color of the sentence “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” to white, and ensure this color change applies only within the hero section.",
       "reqIds": [
         "REQ-1"
       ],
@@ -18,12 +18,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Reduce header height by 20% across all screen sizes on the latest deployed version",
+      "summary": "Change hero section sentence text color to white (only in hero section)",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Reduce landing header height by 20% across all screen sizes",
+  "projectName": "Set hero section tagline text color to white",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

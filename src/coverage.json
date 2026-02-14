@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-13T16:32:00.134Z",
+  "generatedAt": "2026-02-13T17:01:09.294Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,13 +12,13 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Reduce the LandingHeader visual height by 20% across all screen sizes on the current deployed version by decreasing the header’s minimum height and scaling the logo height accordingly, while keeping layout and navigation functionality intact.",
+        "summary": "In the hero section component, change the text color of the sentence “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” to white, and ensure this color change applies only within the hero section.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/LandingHeader.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/LandingHeader.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ]
       }
     ]
@@ -28,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/LandingHeader.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

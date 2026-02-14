@@ -1,29 +1,29 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-13T16:32:00.132Z",
-  "summary": "LandingHeader.tsx was updated to reduce the header min-height and logo height by ~20% at base and md breakpoints, matching the primary sizing requirement. However, the diff also includes unrelated metadata/documentation changes (frontend-file-summaries.txt and project_state.json) that were not requested, violating the constraint to keep the change limited to header sizing.",
+  "generatedAt": "2026-02-13T17:01:09.292Z",
+  "summary": "REQ-1 appears implemented by setting the hero tagline paragraph to `text-white` within `HeroSection.tsx`. However, there are additional unrelated file modifications (`frontend-file-summaries.txt`, `project_state.json`) that were not requested.",
   "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Updated/introduced broad project and component summary content describing unrelated features (e.g., header color tokens, FeaturesSection CTA, Contact/ScheduleConsultation details) despite the request being limited to header sizing only.",
-      "reason": "BuildRequest explicitly constrains changes to header sizing and lists non-goals such as not changing unrelated sections. The diff shows modifications to a summary file containing descriptions of many unrelated features.",
+      "description": "Updated/added project tracking entries for the change request in `project_state.json` (e.g., AR-1/AR-2 marked pending).",
+      "reason": "The BuildRequest only asked to change the hero tagline text color; it did not request modifications to project tracking/state files.",
       "evidence": [
-        "frontend-file-summaries.txt"
+        "project_state.json"
       ]
     },
     {
-      "description": "Added/modified project state tracking entries (AR-1, AR-2) marking the request(s) as pending.",
-      "reason": "BuildRequest did not request any changes to project tracking/state files; this is extra scope beyond reducing the LandingHeader height.",
+      "description": "Modified `frontend-file-summaries.txt` content describing multiple UI/SEO/config features (e.g., header token, reduced header height, features section CTA, etc.).",
+      "reason": "The BuildRequest explicitly scoped changes to only the hero tagline text color and disallowed other styling changes; updating a broad frontend summary file is not requested by REQ-1.",
       "evidence": [
-        "project_state.json"
+        "frontend-file-summaries.txt"
       ]
     }
   ],
   "confidence": 0.72,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/LandingHeader.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json"
   ]
 }

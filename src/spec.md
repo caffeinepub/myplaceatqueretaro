@@ -1,11 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Reduce the LandingHeader height by ~20% across all screen sizes while keeping the fixed header layout and navigation behavior intact.
+**Goal:** Make the hero section tagline sentence render in white text without affecting any other styling or other occurrences of the same sentence elsewhere.
 
 **Planned changes:**
-- Decrease the LandingHeader primary container min-height values in `frontend/src/components/LandingHeader.tsx` by ~20% for both base and `md` breakpoints.
-- Reduce the logo image height values by ~20% for both base and `md` breakpoints to keep the logo visually balanced within the smaller header.
-- Verify the fixed header, navigation click/scroll offsets, and mobile menu open/close behavior still work correctly with the new header height.
+- Update the hero section component so the sentence “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” uses white text color.
+- Scope the styling change to the hero section only, without modifying other hero styles or other sections.
 
-**User-visible outcome:** The landing page header appears ~20% shorter on mobile and desktop, with the logo scaled down proportionally, and navigation/menu interactions work as before (including correct section scroll positioning).
+**User-visible outcome:** On the landing page, the specified hero tagline sentence appears in white text, with no other visual changes on the page.

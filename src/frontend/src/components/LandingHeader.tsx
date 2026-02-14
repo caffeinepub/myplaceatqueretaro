@@ -33,7 +33,7 @@ export function LandingHeader() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center min-h-[176px] md:min-h-[208px] py-4">
+        <div className="flex items-center min-h-[141px] md:min-h-[166px] py-4">
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
@@ -43,7 +43,7 @@ export function LandingHeader() {
             <img
               src="/assets/Logo_Myplace_moslygraytransparent-1.png"
               alt="My Place at Querétaro logo"
-              className="h-[160px] md:h-[192px] w-auto object-contain"
+              className="h-[128px] md:h-[154px] w-auto object-contain"
             />
           </button>
 

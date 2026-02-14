@@ -1,41 +1,48 @@
 {
   "kind": "build_request",
-  "title": "Reduce landing header height by 20% across all screen sizes",
+  "title": "Set hero section tagline text color to white",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Reduce the LandingHeader visual height by 20% across all screen sizes on the current deployed version by decreasing the header’s minimum height and scaling the logo height accordingly, while keeping layout and navigation functionality intact.",
+      "text": "In the hero section component, change the text color of the sentence “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” to white, and ensure this color change applies only within the hero section.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4",
-          "msg-6"
+          "recent-messages-3",
+          "recent-messages-5"
         ],
         "quotes": [
-          "reduce a 20% the full area of the header  please",
-          "1. yes, header height reduced by 20%, 2. all screen sizes and 3. yes"
+          "change the text color of the sentence: \"Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities\" to white",
+          "1. hero section. 2. only in that section and 3. just the color change"
         ]
       },
       "acceptanceCriteria": [
-        "In frontend/src/components/LandingHeader.tsx, the header’s primary container min-height values are reduced by ~20% for both base and md breakpoints (currently min-h-[220px] and md:min-h-[260px]).",
-        "The logo image height values are reduced by ~20% for both base and md breakpoints (currently h-[200px] and md:h-[240px]) so the logo remains visually balanced within the smaller header.",
-        "On mobile and desktop, the header remains fixed, navigation buttons remain visible and clickable, and the mobile menu open/close behavior still works.",
-        "Clicking navigation items still scrolls to the correct section with appropriate offset (no section titles hidden behind the header)."
+        "On the landing page hero section, the specified sentence renders in white text.",
+        "No other instances of the same sentence (if present elsewhere) change color as a result of this update.",
+        "No other hero section styling (font size, spacing, shadows, etc.) is changed beyond the text color."
       ]
     }
   ],
   "constraints": [
-    "Do not edit any files under frontend/src/components/ui or any paths listed as immutable in SYSTEM_CONTEXT.",
-    "Keep the change limited to header sizing (do not redesign unrelated sections)."
+    "Do not modify any files under frontend/src/components/ui or other immutablePaths listed in SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "Changing header colors, opacity, shadows, or typography.",
-    "Changing navigation labels/routes or adding/removing menu items.",
-    "Backend changes or state migrations."
+    "Do not change the hero background image, gradient overlay, buttons, header, or any other page section styling.",
+    "Do not introduce new themes, typography changes, or additional styling adjustments beyond the requested text color change."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

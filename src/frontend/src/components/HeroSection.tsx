@@ -20,7 +20,7 @@ export function HeroSection() {
           <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground mb-6 animate-fade-in text-balance drop-shadow-lg">
             Discover Your Perfect Place in Querétaro
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in text-balance drop-shadow-md">
+          <p className="text-lg sm:text-xl md:text-2xl text-white mb-8 md:mb-12 max-w-2xl mx-auto animate-fade-in text-balance drop-shadow-md">
             Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">

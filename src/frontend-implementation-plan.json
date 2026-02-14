@@ -1,22 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Reduce LandingHeader height by 20% across breakpoints",
+  "title": "Set hero section tagline text color to white",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Reduce the fixed LandingHeader min-height by ~20% on base and md breakpoints and scale the logo height proportionally while keeping navigation and scroll offset behavior intact.",
+      "summary": "Change the hero section tagline sentence text color to white without affecting any other styling or occurrences elsewhere.",
       "acceptanceCriteria": [
-        "In frontend/src/components/LandingHeader.tsx, the header’s primary container min-height values are reduced by ~20% for both base and md breakpoints (currently min-h-[220px] and md:min-h-[260px]).",
-        "The logo image height values are reduced by ~20% for both base and md breakpoints (currently h-[200px] and md:h-[240px]) so the logo remains visually balanced within the smaller header.",
-        "On mobile and desktop, the header remains fixed, navigation buttons remain visible and clickable, and the mobile menu open/close behavior still works.",
-        "Clicking navigation items still scrolls to the correct section with appropriate offset (no section titles hidden behind the header)."
+        "On the landing page hero section, the specified sentence renders in white text.",
+        "No other instances of the same sentence (if present elsewhere) change color as a result of this update.",
+        "No other hero section styling (font size, spacing, shadows, etc.) is changed beyond the text color."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/LandingHeader.tsx",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Reduce the header container Tailwind min-height utilities by ~20% for base and md breakpoints (e.g., min-h-[220px] -> ~min-h-[176px], md:min-h-[260px] -> ~md:min-h-[208px]) and reduce the logo img height utilities proportionally (e.g., h-[200px] -> ~h-[160px], md:h-[240px] -> ~md:h-[192px]) while leaving structure, fixed positioning, and menu toggling logic unchanged; ensure nav click handlers still close mobile menu and keep all interactive elements visible/clickable."
+          "description": "Update only the <p> element that contains “Experience exceptional accommodations and real estate services in one of Mexico's most beautiful colonial cities” to use a white text utility (e.g., replace the existing text color class with a white text class) so the change is scoped to the hero section and does not alter any other styles."
         }
       ]
     }
