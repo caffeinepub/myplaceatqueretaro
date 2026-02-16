@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Update the Instagram URL in the “Follow Us” social links to point to the correct profile.
+**Goal:** Replace the current Hero section background with the uploaded `myplace-qro-hero-image.jpeg` while keeping all Hero content and layout unchanged.
 
 **Planned changes:**
-- Update the Instagram entry in `frontend/src/components/ContactSection.tsx` `socialLinks` array to use `href === "https://www.instagram.com/myplaceatqueretaro"`.
-- Ensure the Instagram link in the rendered “Follow Us” section continues to open in a new tab (`target="_blank"`) and keeps `rel="noopener noreferrer"`.
+- Add `myplace-qro-hero-image.jpeg` to publicly served frontend static assets so it is accessible by URL.
+- Update `frontend/src/components/HeroSection.tsx` to use `myplace-qro-hero-image.jpeg` as the full-width, centered, cover-style hero background instead of the current generated PNG.
+- Keep the existing hero overlay/gradient and all hero text, buttons, layout, and scroll indicator exactly as-is.
 
-**User-visible outcome:** Clicking the Instagram icon in the “Follow Us” section opens https://www.instagram.com/myplaceatqueretaro in a new tab, while other social links remain unchanged.
+**User-visible outcome:** The landing page Hero section displays the uploaded photo as the full-width background behind the existing hero content, with no other visible changes.

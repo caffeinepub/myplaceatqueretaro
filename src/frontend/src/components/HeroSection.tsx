@@ -9,7 +9,7 @@ export function HeroSection() {
         <div
           className="w-full h-full bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url("/assets/generated/hero-day-of-the-dead-mexican-tradition.dim_1920x1080-2.png")',
+            backgroundImage: 'url("/assets/myplace-qro-hero-image.jpeg")',
           }}
         />
       </div>

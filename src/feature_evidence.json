@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-instagram-social-link-url-in-the-follow-us-section-to-exactly-https-www-instagram-com-myplaceatqueretaro",
-      "featureTitle": "Update the Instagram social link URL in the “Follow Us” section to exactly: https://www.instagram.com/myplaceatqueretaro",
+      "featureId": "feature-add-the-uploaded-image-file-myplace-qro-hero-image-jpeg-to-the-frontend-static-assets-and-use-it-as-the-hero-section-full-width-background-image",
+      "featureTitle": "Add the uploaded image file `myplace-qro-hero-image.jpeg` to the frontend static assets and use it as the Hero section full-width background image.",
       "files": [
-        "frontend/src/components/ContactSection.tsx"
+        "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -17,6 +17,44 @@
       ],
       "testIds": [
         "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-keep-all-existing-hero-section-content-headline-text-description-text-buttons-layout-and-scroll-indicator-unchanged-while-swapping-only-the-background-image",
+      "featureTitle": "Keep all existing Hero section content (headline text, description text, buttons, layout, and scroll indicator) unchanged while swapping only the background image.",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-use-the-uploaded-image-as-is-no-cropping-retouching-color-adjustments-or-generated-variants-only-apply-the-existing-hero-overlay-gradient-and-css-positioning-needed-to-display-it-as-a-background",
+      "featureTitle": "Use the uploaded image as-is (no cropping, retouching, color adjustments, or generated variants); only apply the existing hero overlay/gradient and CSS positioning needed to display it as a background.",
+      "files": [
+        "frontend/src/components/HeroSection.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
       ],
       "confidence": "high"
     }

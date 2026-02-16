@@ -1,21 +1,56 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update Instagram URL in Follow Us social links",
+  "title": "Swap Hero background to uploaded JPEG (full-width, unchanged content)",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Update the Instagram social link URL in the ContactSection “Follow Us” links without changing other social links.",
+      "summary": "Add uploaded JPEG to public assets and set it as the Hero section full-width background image.",
       "acceptanceCriteria": [
-        "In frontend/src/components/ContactSection.tsx, the Instagram entry in the socialLinks array uses href === \"https://www.instagram.com/myplaceatqueretaro\".",
-        "The Instagram icon link in the rendered “Follow Us” block navigates to https://www.instagram.com/myplaceatqueretaro in a new tab (target=\"_blank\") and keeps rel=\"noopener noreferrer\".",
-        "No other socialLinks (Facebook, YouTube) URLs are changed."
+        "The file `myplace-qro-hero-image.jpeg` is present in the frontend’s publicly served static assets (e.g., under `frontend/public/assets/...`) and is accessible by URL in the browser.",
+        "`frontend/src/components/HeroSection.tsx` no longer references `/assets/generated/hero-day-of-the-dead-mexican-tradition.dim_1920x1080-2.png` for the hero background, and instead references the uploaded JPEG asset URL.",
+        "The hero background renders full-width behind the hero content (background covers the hero area and remains centered)."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/ContactSection.tsx",
+          "path": "frontend/public/assets/myplace-qro-hero-image.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded file `myplace-qro-hero-image.jpeg` to publicly served static assets so it is reachable under the `/assets/` URL path."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Change only the Instagram object inside the socialLinks array to set href exactly to \"https://www.instagram.com/myplaceatqueretaro\", leaving Facebook/YouTube href values and the existing target/rel attributes unchanged."
+          "description": "Replace the hero background image reference from `/assets/generated/hero-day-of-the-dead-mexican-tradition.dim_1920x1080-2.png` to `/assets/myplace-qro-hero-image.jpeg`, keeping existing full-width cover/center background styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Preserve all existing Hero content and behavior while swapping only the background image.",
+      "acceptanceCriteria": [
+        "The hero headline, paragraph copy, button labels, and button click behaviors remain exactly as before.",
+        "No changes are made to the hero section structure/layout other than the background image source."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the only functional change in HeroSection is the `backgroundImage` URL swap; do not alter any headline/description text, button labels, click handlers, layout markup, or the scroll indicator."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Use the uploaded JPEG as-is with only the existing overlay/gradient and necessary CSS positioning for background display.",
+      "acceptanceCriteria": [
+        "No new edited or regenerated versions of the uploaded image are introduced.",
+        "The hero uses the original JPEG file as the displayed background source (not a transformed/renamed derived image)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Reference the original `/assets/myplace-qro-hero-image.jpeg` directly (no derived variants) and retain the existing overlay gradient and background positioning classes (`bg-cover bg-center bg-no-repeat`) to display it as a background without editing the image."
         }
       ]
     }

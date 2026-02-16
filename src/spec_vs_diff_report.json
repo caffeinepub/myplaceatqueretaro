@@ -1,38 +1,39 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-16T03:42:14.297Z",
-  "summary": "REQ-1’s Instagram URL update appears implemented in ContactSection’s socialLinks and the rendered anchor includes target=\"_blank\" and rel=\"noopener noreferrer\". However, the diff summary does not provide enough information to verify that the Facebook and YouTube URLs were not changed. Additional unrelated files were modified (project_state.json and frontend-file-summaries.txt), which were not requested by the BuildRequest.",
+  "generatedAt": "2026-02-16T21:02:09.923Z",
+  "summary": "HeroSection.tsx now references the new JPEG asset URL for the hero background, but the diff does not show the JPEG being added to publicly served static assets. Two additional non-requested metadata/state files were modified.",
   "missing_requirements": [
     {
       "id": "REQ-1",
-      "requirement": "No other socialLinks (Facebook, YouTube) URLs are changed.",
-      "reason": "The diff summary shows current Facebook/YouTube href values, but does not show the previous values (nor an explicit statement that they were unchanged), so this acceptance criterion cannot be verified from the provided diff summary alone.",
+      "requirement": "Add the uploaded image file `myplace-qro-hero-image.jpeg` to the frontend static assets (e.g., `frontend/public/assets/...`) so it is publicly served and accessible by URL.",
+      "reason": "The diff shows no added files, so there is no evidence that `myplace-qro-hero-image.jpeg` was actually added to `frontend/public/...` (or any other static assets location), even though HeroSection now references `/assets/myplace-qro-hero-image.jpeg`.",
       "evidence": [
-        "frontend/src/components/ContactSection.tsx (truncated)"
+        "<file-diff>: Added: 0 (no added files listed)",
+        "frontend/src/components/HeroSection.tsx (references \"/assets/myplace-qro-hero-image.jpeg\")"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Updated project tracking metadata/new feature request entries in project_state.json (AR-1, AR-2) unrelated to implementing the requested Instagram URL change.",
-      "reason": "The BuildRequest only asks to update the Instagram URL in ContactSection; it does not request changes to project_state.json.",
+      "description": "Updated/modified `frontend-file-summaries.txt` (project documentation/summary content).",
+      "reason": "The BuildRequest only asks to swap the Hero background image and add the JPEG asset; it does not request updating summary/documentation files.",
       "evidence": [
-        "project_state.json"
+        "frontend-file-summaries.txt"
       ]
     },
     {
-      "description": "Updated/added descriptive content in frontend-file-summaries.txt (mentions header/footer tokens, layout/styling changes, Formspree behavior, etc.).",
-      "reason": "The BuildRequest is narrowly scoped to updating the Instagram URL and explicitly disallows styling/layout/icon/label changes; modifying summary documentation is not requested and includes claims beyond the scope.",
+      "description": "Updated/modified `project_state.json` (tracking new_feature_requests/status).",
+      "reason": "The BuildRequest does not request changes to internal project state tracking files.",
       "evidence": [
-        "frontend-file-summaries.txt (truncated)"
+        "project_state.json"
       ]
     }
   ],
-  "confidence": 0.64,
+  "confidence": 0.74,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/src/components/ContactSection.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json"
   ]
 }

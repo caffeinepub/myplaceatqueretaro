@@ -7,10 +7,26 @@
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-update-the-instagram-social-link-url-in-the-follow-us-section-to-exactly-https-www-instagram-com-myplaceatqueretaro",
-      "title": "Update the Instagram social link URL in the “Follow Us” section to exactly: https://www.instagram.com/myplaceatqueretaro",
+      "id": "feature-add-the-uploaded-image-file-myplace-qro-hero-image-jpeg-to-the-frontend-static-assets-and-use-it-as-the-hero-section-full-width-background-image",
+      "title": "Add the uploaded image file `myplace-qro-hero-image.jpeg` to the frontend static assets and use it as the Hero section full-width background image.",
       "reqIds": [
         "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-keep-all-existing-hero-section-content-headline-text-description-text-buttons-layout-and-scroll-indicator-unchanged-while-swapping-only-the-background-image",
+      "title": "Keep all existing Hero section content (headline text, description text, buttons, layout, and scroll indicator) unchanged while swapping only the background image.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-the-uploaded-image-as-is-no-cropping-retouching-color-adjustments-or-generated-variants-only-apply-the-existing-hero-overlay-gradient-and-css-positioning-needed-to-display-it-as-a-background",
+      "title": "Use the uploaded image as-is (no cropping, retouching, color adjustments, or generated variants); only apply the existing hero overlay/gradient and CSS positioning needed to display it as a background.",
+      "reqIds": [
+        "REQ-3"
       ],
       "version": 1
     }
@@ -18,12 +34,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Update the footer \"Follow us\" section Instagram social media link to https://www.instagram.com/myplaceatqueretaro",
+      "summary": "Set the uploaded image as the main hero section full-width background, keeping existing hero content unchanged and using the image as-is (no cropping/optimization).",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Update Instagram URL in “Follow Us” social links",
+  "projectName": "Real Estate Landing",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
