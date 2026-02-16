@@ -1,36 +1,36 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-16T21:02:09.923Z",
-  "summary": "HeroSection.tsx now references the new JPEG asset URL for the hero background, but the diff does not show the JPEG being added to publicly served static assets. Two additional non-requested metadata/state files were modified.",
+  "generatedAt": "2026-02-16T21:15:58.702Z",
+  "summary": "HeroSection.tsx was updated to use /assets/myplace-hero2.jpeg as the hero background via an <img> with object-cover/object-center and min-h-screen layout preserved. However, the diff does not show the new static asset (myplace-hero2.jpeg) being added under frontend/public/assets/, and there are additional unrequested modifications to project_state.json and frontend-file-summaries.txt.",
   "missing_requirements": [
     {
-      "id": "REQ-1",
-      "requirement": "Add the uploaded image file `myplace-qro-hero-image.jpeg` to the frontend static assets (e.g., `frontend/public/assets/...`) so it is publicly served and accessible by URL.",
-      "reason": "The diff shows no added files, so there is no evidence that `myplace-qro-hero-image.jpeg` was actually added to `frontend/public/...` (or any other static assets location), even though HeroSection now references `/assets/myplace-qro-hero-image.jpeg`.",
+      "id": "REQ-5",
+      "requirement": "Include the new hero image file `myplace-hero2.jpeg` as a static asset under `frontend/public/assets/` (or the project’s existing public assets location) so it loads in production builds.",
+      "reason": "The diff shows HeroSection.tsx referencing `/assets/myplace-hero2.jpeg`, but no new file was added and no change indicates the asset exists under frontend/public/assets/.",
       "evidence": [
-        "<file-diff>: Added: 0 (no added files listed)",
-        "frontend/src/components/HeroSection.tsx (references \"/assets/myplace-qro-hero-image.jpeg\")"
+        "frontend/src/components/HeroSection.tsx (references src=\"/assets/myplace-hero2.jpeg\")",
+        "File diff summary: ADDED FILES: none"
       ]
     }
   ],
   "hallucinated_features": [
     {
-      "description": "Updated/modified `frontend-file-summaries.txt` (project documentation/summary content).",
-      "reason": "The BuildRequest only asks to swap the Hero background image and add the JPEG asset; it does not request updating summary/documentation files.",
-      "evidence": [
-        "frontend-file-summaries.txt"
-      ]
-    },
-    {
-      "description": "Updated/modified `project_state.json` (tracking new_feature_requests/status).",
-      "reason": "The BuildRequest does not request changes to internal project state tracking files.",
+      "description": "Updated project tracking/state entries (e.g., new_feature_requests status remains pending) in project_state.json.",
+      "reason": "The BuildRequest only asks to swap the hero background image; changes to project_state.json are not requested deliverables.",
       "evidence": [
         "project_state.json"
       ]
+    },
+    {
+      "description": "Modified frontend-file-summaries.txt content describing many components/sections beyond the hero image swap.",
+      "reason": "The BuildRequest explicitly states non-goals to avoid changing other landing page sections; while this file is a summary, its modification is not requested as part of REQ-5 implementation.",
+      "evidence": [
+        "frontend-file-summaries.txt"
+      ]
     }
   ],
-  "confidence": 0.74,
+  "confidence": 0.72,
   "changed_files": [
     "frontend-file-summaries.txt",
     "frontend/src/components/HeroSection.tsx",

@@ -1,72 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Set uploaded photo as full-width hero background",
+  "title": "Replace hero background with uploaded image (no adjustments)",
   "projectName": "Real Estate Landing",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Add the uploaded image file `myplace-qro-hero-image.jpeg` to the frontend static assets and use it as the Hero section full-width background image.",
+      "id": "REQ-5",
+      "text": "Replace the landing page Hero section background image with the newly uploaded file `myplace-hero2.jpeg`, used exactly as-is.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-user-1"
+          "msg-4",
+          "msg-6"
         ],
         "quotes": [
-          "1. Full-width background, 2. Stay the same,  and 3. as-is"
+          "please use this other image (file attached) for the main hero section, the previous one is not good.",
+          "1.  exactly as‑is"
         ]
       },
       "acceptanceCriteria": [
-        "The file `myplace-qro-hero-image.jpeg` is present in the frontend’s publicly served static assets (e.g., under `frontend/public/assets/...`) and is accessible by URL in the browser.",
-        "`frontend/src/components/HeroSection.tsx` no longer references `/assets/generated/hero-day-of-the-dead-mexican-tradition.dim_1920x1080-2.png` for the hero background, and instead references the uploaded JPEG asset URL.",
-        "The hero background renders full-width behind the hero content (background covers the hero area and remains centered)."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Keep all existing Hero section content (headline text, description text, buttons, layout, and scroll indicator) unchanged while swapping only the background image.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-1"
-        ],
-        "quotes": [
-          "2. Stay the same"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The hero headline, paragraph copy, button labels, and button click behaviors remain exactly as before.",
-        "No changes are made to the hero section structure/layout other than the background image source."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Use the uploaded image as-is (no cropping, retouching, color adjustments, or generated variants); only apply the existing hero overlay/gradient and CSS positioning needed to display it as a background.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-user-1"
-        ],
-        "quotes": [
-          "3. as-is"
-        ]
-      },
-      "acceptanceCriteria": [
-        "No new edited or regenerated versions of the uploaded image are introduced.",
-        "The hero uses the original JPEG file as the displayed background source (not a transformed/renamed derived image)."
+        "`frontend/src/components/HeroSection.tsx` uses `myplace-hero2.jpeg` as the hero background image source.",
+        "The new hero image file is included as a static asset under `frontend/public/assets/` (or the project’s existing public assets location) so it loads in production builds.",
+        "No additional visual adjustments are applied to the uploaded image (no overlays/gradients, darkening filters, tint layers, or cropping edits performed outside the existing `object-cover object-center` rendering).",
+        "Hero section height and layout remain unchanged (e.g., still `min-h-screen`, same content positioning and spacing)."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under `frontend/src/components/ui` (read-only UI components).",
-    "Do not modify `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, or `frontend/src/main.tsx` (immutable paths).",
-    "No backend changes are required for this update."
+    "Do not edit files in `frontend/src/components/ui` or other immutable paths listed in SYSTEM_CONTEXT.",
+    "Keep the Hero section layout/height unchanged; only swap the background image and remove any non-image overlays that would alter its appearance."
   ],
   "nonGoals": [
-    "Redesigning the hero section’s typography, copy, buttons, or layout.",
-    "Adding new hero interactions or animations beyond what already exists.",
-    "Any image editing (cropping/retouching) of `myplace-qro-hero-image.jpeg`.",
-    "Changing global metadata (e.g., HTML title, SEO tags) as part of this request."
+    "Do not change hero headline/subheadline copy or button behavior.",
+    "Do not change other landing page sections (Features, About, Contact, Schedule, Footer).",
+    "Do not introduce new backend logic or schema changes."
   ],
   "imageRequirements": {
     "required": [],

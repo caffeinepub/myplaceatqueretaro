@@ -5,12 +5,10 @@ export function HeroSection() {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Hero Image Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-accent/20 to-secondary/30" />
-        <div
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("/assets/myplace-qro-hero-image.jpeg")',
-          }}
+        <img
+          src="/assets/myplace-hero2.jpeg"
+          alt="Querétaro cityscape with jacaranda trees"
+          className="w-full h-full object-cover object-center"
         />
       </div>
 

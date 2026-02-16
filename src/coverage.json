@@ -1,43 +1,21 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-16T21:02:09.926Z",
+  "generatedAt": "2026-02-16T21:15:58.705Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Add the uploaded image file `myplace-qro-hero-image.jpeg` to the frontend static assets and use it as the Hero section full-width background image.",
+        "id": "REQ-5",
+        "summary": "Replace the landing page Hero section background image with the newly uploaded file `myplace-hero2.jpeg`, used exactly as-is.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/myplace-qro-hero-image.jpeg",
-          "frontend/src/components/HeroSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/HeroSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-2",
-        "summary": "Keep all existing Hero section content (headline text, description text, buttons, layout, and scroll indicator) unchanged while swapping only the background image.",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/HeroSection.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/HeroSection.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Use the uploaded image as-is (no cropping, retouching, color adjustments, or generated variants); only apply the existing hero overlay/gradient and CSS positioning needed to display it as a background.",
-        "status": "implemented",
-        "plannedFiles": [
+          "frontend/public/assets/myplace-hero2.jpeg",
           "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [

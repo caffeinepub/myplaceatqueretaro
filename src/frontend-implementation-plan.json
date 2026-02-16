@@ -1,56 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Swap Hero background to uploaded JPEG (full-width, unchanged content)",
+  "title": "Real Estate Landing: Swap hero background image to myplace-hero2.jpeg",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Add uploaded JPEG to public assets and set it as the Hero section full-width background image.",
+      "id": "REQ-5",
+      "summary": "Swap the landing page Hero section background to the uploaded myplace-hero2.jpeg and remove any non-image overlays while keeping the Hero layout unchanged.",
       "acceptanceCriteria": [
-        "The file `myplace-qro-hero-image.jpeg` is present in the frontend’s publicly served static assets (e.g., under `frontend/public/assets/...`) and is accessible by URL in the browser.",
-        "`frontend/src/components/HeroSection.tsx` no longer references `/assets/generated/hero-day-of-the-dead-mexican-tradition.dim_1920x1080-2.png` for the hero background, and instead references the uploaded JPEG asset URL.",
-        "The hero background renders full-width behind the hero content (background covers the hero area and remains centered)."
+        "`frontend/src/components/HeroSection.tsx` uses `myplace-hero2.jpeg` as the hero background image source.",
+        "The new hero image file is included as a static asset under `frontend/public/assets/` (or the project’s existing public assets location) so it loads in production builds.",
+        "No additional visual adjustments are applied to the uploaded image (no overlays/gradients, darkening filters, tint layers, or cropping edits performed outside the existing `object-cover object-center` rendering).",
+        "Hero section height and layout remain unchanged (e.g., still `min-h-screen`, same content positioning and spacing)."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/myplace-qro-hero-image.jpeg",
+          "path": "frontend/public/assets/myplace-hero2.jpeg",
           "operation": "create",
-          "description": "Add the uploaded file `myplace-qro-hero-image.jpeg` to publicly served static assets so it is reachable under the `/assets/` URL path."
+          "description": "Add the uploaded hero image as a public static asset so it is available in production builds at `frontend/public/assets/myplace-hero2.jpeg`."
         },
         {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Replace the hero background image reference from `/assets/generated/hero-day-of-the-dead-mexican-tradition.dim_1920x1080-2.png` to `/assets/myplace-qro-hero-image.jpeg`, keeping existing full-width cover/center background styling."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Preserve all existing Hero content and behavior while swapping only the background image.",
-      "acceptanceCriteria": [
-        "The hero headline, paragraph copy, button labels, and button click behaviors remain exactly as before.",
-        "No changes are made to the hero section structure/layout other than the background image source."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Ensure the only functional change in HeroSection is the `backgroundImage` URL swap; do not alter any headline/description text, button labels, click handlers, layout markup, or the scroll indicator."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Use the uploaded JPEG as-is with only the existing overlay/gradient and necessary CSS positioning for background display.",
-      "acceptanceCriteria": [
-        "No new edited or regenerated versions of the uploaded image are introduced.",
-        "The hero uses the original JPEG file as the displayed background source (not a transformed/renamed derived image)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
-          "operation": "modify",
-          "description": "Reference the original `/assets/myplace-qro-hero-image.jpeg` directly (no derived variants) and retain the existing overlay gradient and background positioning classes (`bg-cover bg-center bg-no-repeat`) to display it as a background without editing the image."
+          "description": "Update the hero background <img> source to `/assets/myplace-hero2.jpeg` and remove the existing gradient/overlay layer so the image is used exactly as-is, while keeping the section structure, height (`min-h-screen`), and layout unchanged."
         }
       ]
     }

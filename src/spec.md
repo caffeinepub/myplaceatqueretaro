@@ -1,11 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the current Hero section background with the uploaded `myplace-qro-hero-image.jpeg` while keeping all Hero content and layout unchanged.
+**Goal:** Replace the landing page Hero section background with the uploaded image `myplace-hero2.jpeg` exactly as-is.
 
 **Planned changes:**
-- Add `myplace-qro-hero-image.jpeg` to publicly served frontend static assets so it is accessible by URL.
-- Update `frontend/src/components/HeroSection.tsx` to use `myplace-qro-hero-image.jpeg` as the full-width, centered, cover-style hero background instead of the current generated PNG.
-- Keep the existing hero overlay/gradient and all hero text, buttons, layout, and scroll indicator exactly as-is.
+- Add/ensure `myplace-hero2.jpeg` is available as a static public asset (e.g., under `frontend/public/assets/`).
+- Update `frontend/src/components/HeroSection.tsx` to use `myplace-hero2.jpeg` as the Hero background image source.
+- Remove any non-image overlays (gradients/tints/darkening layers) that would visually alter the background image, while keeping the existing `object-cover object-center` behavior.
+- Keep the Hero section layout/height and content positioning unchanged.
 
-**User-visible outcome:** The landing page Hero section displays the uploaded photo as the full-width background behind the existing hero content, with no other visible changes.
+**User-visible outcome:** The landing page Hero displays the new uploaded background image with the same layout and content, without added overlays or visual filters.
