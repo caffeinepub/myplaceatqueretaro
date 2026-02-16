@@ -1,23 +1,32 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace X social link with YouTube in Contact Follow Us section",
+  "title": "Footer burgundy/terracotta background via design tokens",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the X (Twitter) social icon/link in the Contact page Follow Us section with a YouTube icon/link to the provided channel URL, keeping styling and accessibility intact.",
+      "summary": "Introduce a dedicated footer background/foreground design token and update the footer to use it with readable contrast in light and dark mode.",
       "acceptanceCriteria": [
-        "The \"Follow Us\" row no longer includes an item labeled \"X\" / \"X (Twitter)\" and does not render the X icon.",
-        "A YouTube icon/link is present in the same position/group as the other social icons.",
-        "Clicking the YouTube icon opens https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2 in a new tab.",
-        "The YouTube link uses safe external link attributes (target=\"_blank\" and rel=\"noopener noreferrer\").",
-        "The YouTube link has an accessible aria-label indicating \"YouTube\" (or equivalent clear label)."
+        "`frontend/src/components/Footer.tsx` no longer uses `bg-card` for the outer `<footer>` background; it uses a dedicated footer background utility (e.g., `bg-footer`).",
+        "A new footer color token is defined in `frontend/src/index.css` (e.g., `--footer` and, if needed, `--footer-foreground`) for both `:root` and `.dark`.",
+        "`frontend/tailwind.config.js` is extended to expose the footer token as a Tailwind color (e.g., `footer.DEFAULT` and optional `footer.foreground`) so `bg-footer` (and optionally `text-footer-foreground`) work.",
+        "All footer content (headings, paragraph text, links, bottom-bar text) remains clearly legible against the new burgundy/terracotta background in both light and dark mode."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/ContactSection.tsx",
+          "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Update the Follow Us socialLinks array to remove the existing X (Twitter) item and add a YouTube item pointing to https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2; replace the SiX import with the appropriate YouTube icon import from react-icons/si, ensure aria-label is clearly \"YouTube\", and preserve existing link attributes (target=\"_blank\" and rel=\"noopener noreferrer\") and styling/hover/focus behavior."
+          "description": "Add new CSS variables for the footer using the existing design-token approach: define `--footer` (burgundy/terracotta red background) and `--footer-foreground` (high-contrast text color) in both `:root` and `.dark`, ensuring the chosen OKLCH values maintain readable contrast."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme colors to expose the new footer token(s): add `footer.DEFAULT` mapped to `--footer` (supporting `bg-footer`) and add `footer.foreground` mapped to `--footer-foreground` (supporting `text-footer-foreground`) consistent with existing token patterns."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the footer to use the dedicated footer background utility (replace `bg-card` with `bg-footer`) and adjust footer text/link classes to use the footer foreground token (e.g., `text-footer-foreground` and appropriate hover/focus states) so headings, body text, links, and bottom bar remain clearly legible in both light and dark mode without changing layout/spacing/links."
         }
       ]
     }

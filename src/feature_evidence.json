@@ -2,10 +2,12 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-in-the-follow-us-social-links-section-of-the-contact-page-frontend-src-components-contactsection-tsx-remove-the-existing-x-twitter-social-link-and-replace-it-with-a-youtube-social-link-that-points-to-this-exact-url-https-youtube-com-myplaceatqueretaro-si-fi8rt31wp4dxlmy2",
-      "featureTitle": "In the \"Follow Us\" social links section of the Contact page (frontend/src/components/ContactSection.tsx), remove the existing \"X\" (Twitter) social link and replace it with a YouTube social link that points to this exact URL: https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2.",
+      "featureId": "feature-update-the-main-site-footer-background-color-to-a-burgundy-terracotta-red-using-the-existing-design-token-approach-css-variables-tailwind-theme-colors-and-ensure-footer-text-link-contrast-remains-readable-in-both-light-and-dark-mode",
+      "featureTitle": "Update the main site footer background color to a burgundy/terracotta red using the existing design-token approach (CSS variables + Tailwind theme colors), and ensure footer text/link contrast remains readable in both light and dark mode.",
       "files": [
-        "frontend/src/components/ContactSection.tsx"
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
       ],
       "components": [
         "authorization@4.0.0",

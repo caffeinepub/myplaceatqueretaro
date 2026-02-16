@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the “X” (Twitter) social link in the Contact page “Follow Us” section with a YouTube link to the provided channel URL.
+**Goal:** Change the main site footer background to a burgundy/terracotta red using design tokens, while keeping footer text and links readable in both light and dark mode.
 
 **Planned changes:**
-- Update `frontend/src/components/ContactSection.tsx` to remove the existing X/Twitter icon/link entry from the “Follow Us” social links row.
-- Add a YouTube icon/link in the same social links group that opens `https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2` in a new tab using safe external link attributes (`target="_blank"` and `rel="noopener noreferrer"`), with an accessible aria-label for “YouTube”.
+- Add new footer color token(s) in `frontend/src/index.css` (e.g., `--footer` and optionally `--footer-foreground`) for both `:root` and `.dark`.
+- Extend `frontend/tailwind.config.js` to expose the new footer token(s) as Tailwind theme colors so utilities like `bg-footer` (and optionally `text-footer-foreground`) are available.
+- Update `frontend/src/components/Footer.tsx` to use the dedicated footer background utility instead of `bg-card`, and ensure all footer text/link styles have sufficient contrast in light and dark mode.
 
-**User-visible outcome:** The Contact page “Follow Us” section shows a YouTube icon instead of X/Twitter, and clicking it opens the specified YouTube channel in a new tab.
+**User-visible outcome:** The site footer displays a burgundy/terracotta red background with clearly legible headings, text, and links in both light and dark mode.

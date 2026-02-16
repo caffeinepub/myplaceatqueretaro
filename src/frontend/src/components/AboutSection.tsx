@@ -4,17 +4,17 @@ export function AboutSection() {
   const trustIndicators = [
     {
       icon: Clock,
-      value: '10+',
+      value: '36+',
       label: 'Years of Experience',
     },
     {
       icon: Users,
-      value: '500+',
+      value: '500+ per year',
       label: 'Happy Clients',
     },
     {
       icon: Award,
-      value: '100%',
+      value: '98%',
       label: 'Satisfaction Rate',
     },
   ];
@@ -30,13 +30,7 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Nestled in the heart of Mexico, Querétaro is a UNESCO World Heritage city that seamlessly blends colonial charm with modern sophistication. Known for its stunning architecture, vibrant culture, and thriving economy, it's become one of Mexico's most desirable destinations.
-              </p>
-              <p>
-                We specialize in connecting people with their ideal accommodations and real estate opportunities in this remarkable city. Whether you're visiting for business, seeking a vacation retreat, or looking to invest in property, we provide personalized service backed by deep local knowledge.
-              </p>
-              <p>
-                Our commitment is simple: to make your Querétaro experience exceptional from start to finish. We handle every detail with care, ensuring your journey is smooth, enjoyable, and perfectly tailored to your needs.
+                Our Commitment is simple: to make your Queretaro experience exceptional from start to finish. We can handle every detail with care, ensuring your journey is smooth, enjoyable,  and perfectly tailored to your needs.
               </p>
             </div>
 

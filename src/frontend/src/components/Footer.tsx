@@ -21,33 +21,32 @@ export function Footer() {
     : 'myplaceatqueretaro';
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-footer border-t border-footer-foreground/10">
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">MP</span>
-              </div>
-              <span className="font-display font-bold text-xl text-foreground">
-                My Place at Querétaro
-              </span>
+            <div className="mb-4">
+              <img
+                src="/assets/Logo_Myplace_moslygraytransparent-1.png"
+                alt="My Place at Querétaro logo"
+                className="h-[128px] md:h-[154px] w-auto object-contain"
+              />
             </div>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-footer-foreground/80 leading-relaxed">
               Your trusted partner for exceptional accommodations and real estate services in Querétaro, Mexico.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-footer-foreground mb-4">Quick Links</h3>
             <nav className="space-y-2">
               {footerLinks.map((link) => (
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="block text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1 py-1 text-left"
+                  className="block text-footer-foreground/80 hover:text-footer-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-footer-foreground rounded px-1 py-1 text-left"
                 >
                   {link.label}
                 </button>
@@ -57,13 +56,13 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Legal</h3>
+            <h3 className="font-semibold text-footer-foreground mb-4">Legal</h3>
             <nav className="space-y-2">
               {legalLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1 py-1"
+                  className="block text-footer-foreground/80 hover:text-footer-foreground transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-footer-foreground rounded px-1 py-1"
                 >
                   {link.label}
                 </a>
@@ -73,17 +72,17 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm text-center md:text-left">
+        <div className="pt-8 border-t border-footer-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-footer-foreground/80 text-sm text-center md:text-left">
             © {currentYear} My Place at Querétaro. All rights reserved.
           </p>
-          <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Built with <Heart className="w-4 h-4 text-primary fill-primary" /> using{' '}
+          <p className="text-footer-foreground/80 text-sm flex items-center gap-1">
+            Built with <Heart className="w-4 h-4 text-footer-foreground fill-footer-foreground" /> using{' '}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1"
+              className="text-footer-foreground hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-footer-foreground rounded px-1"
             >
               caffeine.ai
             </a>

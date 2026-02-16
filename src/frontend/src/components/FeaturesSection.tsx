@@ -20,7 +20,7 @@ export function FeaturesSection() {
     {
       icon: Star,
       title: 'Personalized Experience',
-      description: 'Tailored solutions that match your unique needs, whether you\'re seeking a short-term rental or long-term investment.',
+      description: 'We provide tailored solutions that match your unique needs, whether you\'re looking to rent or invest for the long term.',
     },
   ];
 

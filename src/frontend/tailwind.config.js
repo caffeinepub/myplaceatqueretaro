@@ -62,6 +62,10 @@ export default {
                 header: {
                     DEFAULT: 'oklch(var(--header) / <alpha-value>)',
                     foreground: 'oklch(var(--header-foreground))'
+                },
+                footer: {
+                    DEFAULT: 'oklch(var(--footer) / <alpha-value>)',
+                    foreground: 'oklch(var(--footer-foreground))'
                 }
             },
             fontFamily: {

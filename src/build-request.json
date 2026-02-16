@@ -1,39 +1,35 @@
 {
   "kind": "build_request",
-  "title": "Replace X social link with YouTube in Follow Us section",
+  "title": "Set main site footer background to burgundy/terracotta red",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "In the \"Follow Us\" social links section of the Contact page (frontend/src/components/ContactSection.tsx), remove the existing \"X\" (Twitter) social link and replace it with a YouTube social link that points to this exact URL: https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2.",
+      "text": "Update the main site footer background color to a burgundy/terracotta red using the existing design-token approach (CSS variables + Tailwind theme colors), and ensure footer text/link contrast remains readable in both light and dark mode.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-6",
-          "msg-8"
+          "msg-1"
         ],
         "quotes": [
-          "in the same section (Follow us), please remove the \"X\" link for such social media, since i do not have a channel there.",
-          "with YouTube please and linked to \" https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2\""
+          "please use the color burgundy/terracotta red for the footer background"
         ]
       },
       "acceptanceCriteria": [
-        "The \"Follow Us\" row no longer includes an item labeled \"X\" / \"X (Twitter)\" and does not render the X icon.",
-        "A YouTube icon/link is present in the same position/group as the other social icons.",
-        "Clicking the YouTube icon opens https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2 in a new tab.",
-        "The YouTube link uses safe external link attributes (target=\"_blank\" and rel=\"noopener noreferrer\").",
-        "The YouTube link has an accessible aria-label indicating \"YouTube\" (or equivalent clear label)."
+        "`frontend/src/components/Footer.tsx` no longer uses `bg-card` for the outer `<footer>` background; it uses a dedicated footer background utility (e.g., `bg-footer`).",
+        "A new footer color token is defined in `frontend/src/index.css` (e.g., `--footer` and, if needed, `--footer-foreground`) for both `:root` and `.dark`.",
+        "`frontend/tailwind.config.js` is extended to expose the footer token as a Tailwind color (e.g., `footer.DEFAULT` and optional `footer.foreground`) so `bg-footer` (and optionally `text-footer-foreground`) work.",
+        "All footer content (headings, paragraph text, links, bottom-bar text) remains clearly legible against the new burgundy/terracotta background in both light and dark mode."
       ]
     }
   ],
   "constraints": [
-    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
-    "Do not introduce additional backend services or external databases; this change must be frontend-only."
+    "Do not edit any files under `frontend/src/components/ui` (read-only components).",
+    "Do not modify any paths listed in `frontend.immutablePaths` from SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "Do not change any other social links (e.g., Facebook, Instagram) beyond replacing the X link.",
-    "Do not redesign the Contact section layout or styling; keep existing spacing, sizing, and hover/focus behavior.",
-    "Do not add or change backend logic; no Motoko changes required."
+    "Do not change the header color or other site section colors.",
+    "Do not change footer layout, spacing, links, or logo assets beyond what is required for color/contrast."
   ],
   "imageRequirements": {
     "required": [],

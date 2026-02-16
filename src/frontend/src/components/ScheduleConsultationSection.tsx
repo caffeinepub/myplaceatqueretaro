@@ -27,7 +27,7 @@ export function ScheduleConsultationSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 md:mb-16 max-w-4xl mx-auto">
           <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl text-foreground mb-6">
-            Schedule your free consultation
+            Schedule your free Discovery call
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Prefer to book directly? Use our calendar below to schedule a consultation at your convenience.

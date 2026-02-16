@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-14T18:46:33.646Z",
+  "generatedAt": "2026-02-16T03:16:25.055Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,13 +12,17 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "In the \"Follow Us\" social links section of the Contact page (frontend/src/components/ContactSection.tsx), remove the existing \"X\" (Twitter) social link and replace it with a YouTube social link that points to this exact URL: https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2.",
+        "summary": "Update the main site footer background color to a burgundy/terracotta red using the existing design-token approach (CSS variables + Tailwind theme colors), and ensure footer text/link contrast remains readable in both light and dark mode.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/ContactSection.tsx"
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Footer.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/ContactSection.tsx"
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js",
+          "frontend/src/components/Footer.tsx"
         ]
       }
     ]
@@ -28,7 +32,9 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/ContactSection.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/index.css",
+    "frontend/tailwind.config.js",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",
