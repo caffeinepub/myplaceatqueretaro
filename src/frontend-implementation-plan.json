@@ -1,32 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Footer burgundy/terracotta background via design tokens",
+  "title": "Update Instagram URL in Follow Us social links",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Introduce a dedicated footer background/foreground design token and update the footer to use it with readable contrast in light and dark mode.",
+      "summary": "Update the Instagram social link URL in the ContactSection “Follow Us” links without changing other social links.",
       "acceptanceCriteria": [
-        "`frontend/src/components/Footer.tsx` no longer uses `bg-card` for the outer `<footer>` background; it uses a dedicated footer background utility (e.g., `bg-footer`).",
-        "A new footer color token is defined in `frontend/src/index.css` (e.g., `--footer` and, if needed, `--footer-foreground`) for both `:root` and `.dark`.",
-        "`frontend/tailwind.config.js` is extended to expose the footer token as a Tailwind color (e.g., `footer.DEFAULT` and optional `footer.foreground`) so `bg-footer` (and optionally `text-footer-foreground`) work.",
-        "All footer content (headings, paragraph text, links, bottom-bar text) remains clearly legible against the new burgundy/terracotta background in both light and dark mode."
+        "In frontend/src/components/ContactSection.tsx, the Instagram entry in the socialLinks array uses href === \"https://www.instagram.com/myplaceatqueretaro\".",
+        "The Instagram icon link in the rendered “Follow Us” block navigates to https://www.instagram.com/myplaceatqueretaro in a new tab (target=\"_blank\") and keeps rel=\"noopener noreferrer\".",
+        "No other socialLinks (Facebook, YouTube) URLs are changed."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/index.css",
+          "path": "frontend/src/components/ContactSection.tsx",
           "operation": "modify",
-          "description": "Add new CSS variables for the footer using the existing design-token approach: define `--footer` (burgundy/terracotta red background) and `--footer-foreground` (high-contrast text color) in both `:root` and `.dark`, ensuring the chosen OKLCH values maintain readable contrast."
-        },
-        {
-          "path": "frontend/tailwind.config.js",
-          "operation": "modify",
-          "description": "Extend Tailwind theme colors to expose the new footer token(s): add `footer.DEFAULT` mapped to `--footer` (supporting `bg-footer`) and add `footer.foreground` mapped to `--footer-foreground` (supporting `text-footer-foreground`) consistent with existing token patterns."
-        },
-        {
-          "path": "frontend/src/components/Footer.tsx",
-          "operation": "modify",
-          "description": "Update the footer to use the dedicated footer background utility (replace `bg-card` with `bg-footer`) and adjust footer text/link classes to use the footer foreground token (e.g., `text-footer-foreground` and appropriate hover/focus states) so headings, body text, links, and bottom bar remain clearly legible in both light and dark mode without changing layout/spacing/links."
+          "description": "Change only the Instagram object inside the socialLinks array to set href exactly to \"https://www.instagram.com/myplaceatqueretaro\", leaving Facebook/YouTube href values and the existing target/rel attributes unchanged."
         }
       ]
     }

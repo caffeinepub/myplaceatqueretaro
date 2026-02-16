@@ -26,7 +26,7 @@ export function ContactSection() {
 
   const socialLinks = [
     { icon: SiFacebook, label: 'Facebook', href: 'https://www.facebook.com/MyPlaceAtQueretaro' },
-    { icon: SiInstagram, label: 'Instagram', href: 'https://www.instagram.com/myplaceatqueretaro?igsh=MTg3NXRseDBwMXZ4eg%3D%3D&utm_source=qr' },
+    { icon: SiInstagram, label: 'Instagram', href: 'https://www.instagram.com/myplaceatqueretaro' },
     { icon: SiYoutube, label: 'YouTube', href: 'https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2' },
   ];
 

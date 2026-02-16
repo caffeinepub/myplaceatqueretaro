@@ -7,8 +7,8 @@
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-update-the-main-site-footer-background-color-to-a-burgundy-terracotta-red-using-the-existing-design-token-approach-css-variables-tailwind-theme-colors-and-ensure-footer-text-link-contrast-remains-readable-in-both-light-and-dark-mode",
-      "title": "Update the main site footer background color to a burgundy/terracotta red using the existing design-token approach (CSS variables + Tailwind theme colors), and ensure footer text/link contrast remains readable in both light and dark mode.",
+      "id": "feature-update-the-instagram-social-link-url-in-the-follow-us-section-to-exactly-https-www-instagram-com-myplaceatqueretaro",
+      "title": "Update the Instagram social link URL in the “Follow Us” section to exactly: https://www.instagram.com/myplaceatqueretaro",
       "reqIds": [
         "REQ-1"
       ],
@@ -18,12 +18,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Set main site footer background color to a burgundy/terracotta red",
+      "summary": "Update the footer \"Follow us\" section Instagram social media link to https://www.instagram.com/myplaceatqueretaro",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "Set main site footer background to burgundy/terracotta red",
+  "projectName": "Update Instagram URL in “Follow Us” social links",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

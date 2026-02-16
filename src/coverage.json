@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-16T03:16:25.055Z",
+  "generatedAt": "2026-02-16T03:42:14.299Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,17 +12,13 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Update the main site footer background color to a burgundy/terracotta red using the existing design-token approach (CSS variables + Tailwind theme colors), and ensure footer text/link contrast remains readable in both light and dark mode.",
+        "summary": "Update the Instagram social link URL in the “Follow Us” section to exactly: https://www.instagram.com/myplaceatqueretaro",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js",
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/ContactSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/index.css",
-          "frontend/tailwind.config.js",
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/ContactSection.tsx"
         ]
       }
     ]
@@ -32,9 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/Footer.tsx",
-    "frontend/src/index.css",
-    "frontend/tailwind.config.js",
+    "frontend/src/components/ContactSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

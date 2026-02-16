@@ -1,48 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Set main site footer background to burgundy/terracotta red",
+  "title": "Update Instagram URL in “Follow Us” social links",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update the main site footer background color to a burgundy/terracotta red using the existing design-token approach (CSS variables + Tailwind theme colors), and ensure footer text/link contrast remains readable in both light and dark mode.",
+      "text": "Update the Instagram social link URL in the “Follow Us” section to exactly: https://www.instagram.com/myplaceatqueretaro",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-user-instagram-1",
+          "msg-user-confirm-1"
         ],
         "quotes": [
-          "please use the color burgundy/terracotta red for the footer background"
+          "please change the social media link for Instagram with this one: \" https://www.instagram.com/myplaceatqueretaro\"",
+          "1. yes, in the \"Follow us\" section"
         ]
       },
       "acceptanceCriteria": [
-        "`frontend/src/components/Footer.tsx` no longer uses `bg-card` for the outer `<footer>` background; it uses a dedicated footer background utility (e.g., `bg-footer`).",
-        "A new footer color token is defined in `frontend/src/index.css` (e.g., `--footer` and, if needed, `--footer-foreground`) for both `:root` and `.dark`.",
-        "`frontend/tailwind.config.js` is extended to expose the footer token as a Tailwind color (e.g., `footer.DEFAULT` and optional `footer.foreground`) so `bg-footer` (and optionally `text-footer-foreground`) work.",
-        "All footer content (headings, paragraph text, links, bottom-bar text) remains clearly legible against the new burgundy/terracotta background in both light and dark mode."
+        "In frontend/src/components/ContactSection.tsx, the Instagram entry in the socialLinks array uses href === \"https://www.instagram.com/myplaceatqueretaro\".",
+        "The Instagram icon link in the rendered “Follow Us” block navigates to https://www.instagram.com/myplaceatqueretaro in a new tab (target=\"_blank\") and keeps rel=\"noopener noreferrer\".",
+        "No other socialLinks (Facebook, YouTube) URLs are changed."
       ]
     }
   ],
   "constraints": [
-    "Do not edit any files under `frontend/src/components/ui` (read-only components).",
-    "Do not modify any paths listed in `frontend.immutablePaths` from SYSTEM_CONTEXT."
+    "Do not modify any files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or any files in frontend/src/components/ui."
   ],
   "nonGoals": [
-    "Do not change the header color or other site section colors.",
-    "Do not change footer layout, spacing, links, or logo assets beyond what is required for color/contrast."
+    "Do not change styling, layout, icons, or labels in the “Follow Us” section beyond updating the Instagram URL.",
+    "Do not add new social networks or remove existing ones.",
+    "No backend changes or data migrations."
   ],
   "imageRequirements": {
     "required": [],
     "edits": []
-  },
-  "userProfileUpdate": {
-    "goalsToAdd": [],
-    "goalsToRemove": [],
-    "preferencesToAdd": [],
-    "preferencesToRemove": [],
-    "miscToAdd": [],
-    "miscToRemove": [],
-    "fieldsToSet": {},
-    "fieldsToDelete": []
   }
 }
