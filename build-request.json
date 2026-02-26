@@ -1,0 +1,75 @@
+{
+  "kind": "build_request",
+  "title": "Update footer styling to white background with readable text",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Change the footer background color from bg-gray-800 to bg-white in the Footer component",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "change the color of the footer background to bg-white"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer background uses bg-white class",
+        "Footer background is visually white matching the header"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Update footer text colors to ensure readability on white background (use dark text colors such as text-gray-800 or text-gray-900 for all footer text elements)",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "yes, change footer text color so it remains readable"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All footer text is clearly readable against the white background",
+        "Footer text uses appropriate dark color classes",
+        "Social links and other interactive elements maintain sufficient contrast"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Preserve all existing footer styling including padding, borders, layout structure, and spacing",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Keep it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer padding remains unchanged",
+        "Footer layout structure is preserved",
+        "All spacing between footer elements remains the same"
+      ]
+    }
+  ],
+  "constraints": [
+    "Only modify the Footer component (frontend/src/components/Footer.tsx)",
+    "Do not change footer layout, padding, borders, or structural elements",
+    "Maintain all existing footer content and links"
+  ],
+  "nonGoals": [
+    "Changing header styling",
+    "Modifying footer content or links",
+    "Adjusting footer layout or structure",
+    "Adding new footer features"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
