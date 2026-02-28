@@ -1,29 +1,41 @@
 import { Home, MapPin, Shield, Star } from 'lucide-react';
 
-export function FeaturesSection() {
-  const features = [
-    {
-      icon: Home,
-      title: 'Premium Accommodations',
-      description: 'Carefully curated properties that combine comfort, style, and authentic Mexican hospitality for an unforgettable stay.',
-    },
-    {
-      icon: MapPin,
-      title: 'Prime Locations',
-      description: 'Strategic locations throughout Querétaro, from the historic center to modern residential areas, ensuring convenience and accessibility.',
-    },
-    {
-      icon: Shield,
-      title: 'Trusted Service',
-      description: 'Years of experience in the local market with a commitment to transparency, reliability, and exceptional customer care.',
-    },
-    {
-      icon: Star,
-      title: 'Personalized Experience',
-      description: 'We provide tailored solutions that match your unique needs, whether you\'re looking to rent or invest for the long term.',
-    },
-  ];
+const features = [
+  {
+    icon: Home,
+    title: 'Premium Accommodations',
+    description:
+      'Carefully curated properties that combine comfort, style, and authentic Mexican hospitality for an unforgettable stay.',
+    image: '/assets/generated/feature-accommodations.dim_800x600.png',
+    imageAlt: 'Elegant furnished living room in a Querétaro property',
+  },
+  {
+    icon: MapPin,
+    title: 'Prime Locations',
+    description:
+      'Strategic locations throughout Querétaro, from the historic center to modern residential areas, ensuring convenience and accessibility.',
+    image: '/assets/generated/feature-locations.dim_800x600.png',
+    imageAlt: 'Charming cobblestone street in Querétaro historic center',
+  },
+  {
+    icon: Shield,
+    title: 'Trusted Service',
+    description:
+      'Years of experience in the local market with a commitment to transparency, reliability, and exceptional customer care.',
+    image: '/assets/generated/feature-service.dim_800x600.png',
+    imageAlt: 'Welcoming handshake representing trusted real estate service',
+  },
+  {
+    icon: Star,
+    title: 'Personalized Experience',
+    description:
+      "We provide tailored solutions that match your unique needs, whether you're looking to rent or invest for the long term.",
+    image: '/assets/generated/feature-personalized.dim_800x600.png',
+    imageAlt: 'Happy family enjoying their terrace in Querétaro',
+  },
+];
 
+export function FeaturesSection() {
   return (
     <section id="features" className="py-16 md:py-24 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -50,17 +62,29 @@ export function FeaturesSection() {
             return (
               <div
                 key={index}
-                className="bg-card rounded-xl p-6 md:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1"
+                className="bg-card rounded-xl overflow-hidden shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                  <Icon className="w-7 h-7 text-primary" />
+                {/* Feature Image */}
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={feature.image}
+                    alt={feature.imageAlt}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
                 </div>
-                <h3 className="font-display font-semibold text-xl md:text-2xl text-foreground mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
+
+                {/* Feature Content */}
+                <div className="p-6 md:p-8 flex flex-col flex-1">
+                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="font-display font-semibold text-xl md:text-2xl text-foreground mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
             );
           })}

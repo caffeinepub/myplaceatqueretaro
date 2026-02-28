@@ -1,52 +1,33 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update footer styling to white background with readable text",
+  "title": "Add Nano Banana property images to the landing page",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Change the footer background color from bg-gray-800 to bg-white in the Footer component",
+      "summary": "Integrate curated Nano Banana property images into HeroSection, FeaturesSection, and AboutSection, replacing existing placeholder imagery with new assets from frontend/public/assets/generated",
       "acceptanceCriteria": [
-        "Footer background uses bg-white class",
-        "Footer background is visually white matching the header"
+        "New images from Nano Banana are displayed in at least the HeroSection and one other section (e.g., FeaturesSection or AboutSection).",
+        "Images are stored as static assets under frontend/public/assets/generated.",
+        "Images match the warm terracotta/earth-tone visual style of the site.",
+        "All images load correctly and are properly sized for their respective sections.",
+        "No broken image links or missing asset references exist after the update."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/Footer.tsx",
+          "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Replace the bg-gray-800 class with bg-white in the footer's root element to match the header background color"
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Update footer text colors to ensure readability on white background",
-      "acceptanceCriteria": [
-        "All footer text is clearly readable against the white background",
-        "Footer text uses appropriate dark color classes",
-        "Social links and other interactive elements maintain sufficient contrast"
-      ],
-      "file_operations": [
+          "description": "Replace the existing background image URL with the new hero image frontend/public/assets/generated/hero-nano-banana.dim_1920x1080.png to display a warm-toned aerial or street-level view of colonial-style residential buildings with terracotta rooftops and lush greenery in Querétaro style."
+        },
         {
-          "path": "frontend/src/components/Footer.tsx",
+          "path": "frontend/src/components/FeaturesSection.tsx",
           "operation": "modify",
-          "description": "Update all text color classes to dark variants (text-gray-800 or text-gray-900) for headings, paragraphs, links, and social icons to ensure readability against the white background"
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Preserve all existing footer styling including padding, borders, layout structure, and spacing",
-      "acceptanceCriteria": [
-        "Footer padding remains unchanged",
-        "Footer layout structure is preserved",
-        "All spacing between footer elements remains the same"
-      ],
-      "file_operations": [
+          "description": "Update the four feature cards to display the generated Nano Banana images: frontend/public/assets/generated/feature-accommodations.dim_800x600.png for Premium Accommodations (elegant furnished living room), frontend/public/assets/generated/feature-locations.dim_800x600.png for Prime Locations (charming cobblestone street), frontend/public/assets/generated/feature-service.dim_800x600.png for Trusted Service (welcoming handshake scene), and frontend/public/assets/generated/feature-personalized.dim_800x600.png for Personalized Experience (happy family on terrace). Ensure images are properly sized and maintain the existing card layout structure."
+        },
         {
-          "path": "frontend/src/components/Footer.tsx",
+          "path": "frontend/src/components/AboutSection.tsx",
           "operation": "modify",
-          "description": "Verify that all padding, margin, border, layout grid, and spacing classes remain unchanged during the color updates"
+          "description": "Replace the existing about-us-image.jpg with frontend/public/assets/generated/about-team.dim_900x700.png showing a warm portrait-style photo of a professional real estate team in front of a colonial building. Maintain the current two-column grid layout and ensure the image displays properly alongside the company description and trust indicators."
         }
       ]
     }

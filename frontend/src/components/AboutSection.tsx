@@ -30,7 +30,7 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Our Commitment is simple: to make your Queretaro experience exceptional from start to finish. We can handle every detail with care, ensuring your journey is smooth, enjoyable,  and perfectly tailored to your needs.
+                Our Commitment is simple: to make your Queretaro experience exceptional from start to finish. We can handle every detail with care, ensuring your journey is smooth, enjoyable, and perfectly tailored to your needs.
               </p>
             </div>
 
@@ -59,8 +59,8 @@ export function AboutSection() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-soft-lg">
               <img
-                src="/assets/about-us-image.jpg"
-                alt="MyPlace at Querétaro team"
+                src="/assets/generated/about-team.dim_900x700.png"
+                alt="MyPlace at Querétaro professional real estate team"
                 className="w-full h-full object-cover"
               />
             </div>

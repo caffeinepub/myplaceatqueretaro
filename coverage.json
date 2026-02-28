@@ -1,57 +1,48 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-19T16:54:04.400Z",
+  "generatedAt": "2026-02-28T01:07:55.877Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 1,
+    "implemented": 1,
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Change the footer background color from bg-gray-800 to bg-white in the Footer component",
+        "summary": "Source and integrate a curated set of visually appealing property/lifestyle images from Nano Banana (https://nanobanana.com) into the landing page sections — particularly the HeroSection background, FeaturesSection cards, and/or AboutSection — replacing or supplementing any existing placeholder imagery with these new assets stored in frontend/public/assets/generated.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/FeaturesSection.tsx",
+          "frontend/src/components/AboutSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/Footer.tsx"
-        ]
-      },
-      {
-        "id": "REQ-2",
-        "summary": "Update footer text colors to ensure readability on white background (use dark text colors such as text-gray-800 or text-gray-900 for all footer text elements)",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Footer.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Footer.tsx"
-        ]
-      },
-      {
-        "id": "REQ-3",
-        "summary": "Preserve all existing footer styling including padding, borders, layout structure, and spacing",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/components/Footer.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/components/Footer.tsx"
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/FeaturesSection.tsx",
+          "frontend/src/components/AboutSection.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
+    "build-template/README.md",
     "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/Footer.tsx",
+    "frontend/public/assets/generated/about-team.dim_900x700.png",
+    "frontend/public/assets/generated/feature-accommodations.dim_800x600.png",
+    "frontend/public/assets/generated/feature-locations.dim_800x600.png",
+    "frontend/public/assets/generated/feature-personalized.dim_800x600.png",
+    "frontend/public/assets/generated/feature-service.dim_800x600.png",
+    "frontend/public/assets/generated/hero-nano-banana.dim_1920x1080.png",
+    "frontend/src/components/AboutSection.tsx",
+    "frontend/src/components/FeaturesSection.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

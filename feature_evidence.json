@@ -2,10 +2,12 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-change-the-footer-background-color-from-bg-gray-800-to-bg-white-in-the-footer-component",
-      "featureTitle": "Change the footer background color from bg-gray-800 to bg-white in the Footer component",
+      "featureId": "feature-source-and-integrate-a-curated-set-of-visually-appealing-property-lifestyle-images-from-nano-banana-https-nanobanana-com-into-the-landing-page-sections-particularly-the-herosection-background-featuressection-cards-and-or-aboutsection-replacing-or-supplementing-any-existing-placeholder-imagery-with-these-new-assets-stored-in-frontend-public-assets-generated",
+      "featureTitle": "Source and integrate a curated set of visually appealing property/lifestyle images from Nano Banana (https://nanobanana.com) into the landing page sections — particularly the HeroSection background, FeaturesSection cards, and/or AboutSection — replacing or supplementing any existing placeholder imagery with these new assets stored in frontend/public/assets/generated.",
       "files": [
-        "frontend/src/components/Footer.tsx"
+        "frontend/src/components/AboutSection.tsx",
+        "frontend/src/components/FeaturesSection.tsx",
+        "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -17,44 +19,6 @@
       ],
       "testIds": [
         "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-update-footer-text-colors-to-ensure-readability-on-white-background-use-dark-text-colors-such-as-text-gray-800-or-text-gray-900-for-all-footer-text-elements",
-      "featureTitle": "Update footer text colors to ensure readability on white background (use dark text colors such as text-gray-800 or text-gray-900 for all footer text elements)",
-      "files": [
-        "frontend/src/components/Footer.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-preserve-all-existing-footer-styling-including-padding-borders-layout-structure-and-spacing",
-      "featureTitle": "Preserve all existing footer styling including padding, borders, layout structure, and spacing",
-      "files": [
-        "frontend/src/components/Footer.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
       ],
       "confidence": "high"
     }
