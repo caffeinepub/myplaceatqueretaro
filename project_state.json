@@ -5,13 +5,12 @@
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Warm-toned aerial or street-level view of colonial-style residential buildings with terracotta rooftops and lush greenery, Querétaro style (hero-nano-banana.dim_1920x1080.png)\n- Elegant furnished living room interior with warm earth tones, natural light, and modern colonial decor (feature-accommodations.dim_800x600.png)\n- Charming cobblestone street or plaza in a colonial Mexican town with colorful facades and blue sky (feature-locations.dim_800x600.png)\n- Welcoming handshake or couple meeting a real estate agent in a bright, airy setting (feature-service.dim_800x600.png)\n- Happy family or couple enjoying a sunny terrace or courtyard of a Mexican colonial home (feature-personalized.dim_800x600.png)\n- Warm portrait-style photo of a professional real estate team in front of a colonial building (about-team.dim_900x700.png)",
   "existing_features": [
     {
-      "id": "feature-source-and-integrate-a-curated-set-of-visually-appealing-property-lifestyle-images-from-nano-banana-https-nanobanana-com-into-the-landing-page-sections-particularly-the-herosection-background-featuressection-cards-and-or-aboutsection-replacing-or-supplementing-any-existing-placeholder-imagery-with-these-new-assets-stored-in-frontend-public-assets-generated",
-      "title": "Source and integrate a curated set of visually appealing property/lifestyle images from Nano Banana (https://nanobanana.com) into the landing page sections — particularly the HeroSection background, FeaturesSection cards, and/or AboutSection — replacing or supplementing any existing placeholder imagery with these new assets stored in frontend/public/assets/generated.",
+      "id": "feature-replace-the-landing-page-hero-section-background-image-with-the-newly-uploaded-file-myplace-hero2-jpeg-used-exactly-as-is",
+      "title": "Replace the landing page Hero section background image with the newly uploaded file `myplace-hero2.jpeg`, used exactly as-is.",
       "reqIds": [
-        "REQ-1"
+        "REQ-5"
       ],
       "version": 1
     }
@@ -19,12 +18,12 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Add images from Nano Banana",
+      "summary": "Replace the main hero section background image with the newly uploaded image, used exactly as-is (no crop/overlay/adjustments).",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "projectName": "My Place Querétaro",
+  "projectName": "Real Estate Landing",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

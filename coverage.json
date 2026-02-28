@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T01:07:55.877Z",
+  "generatedAt": "2026-02-16T21:15:58.705Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,37 +11,24 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Source and integrate a curated set of visually appealing property/lifestyle images from Nano Banana (https://nanobanana.com) into the landing page sections — particularly the HeroSection background, FeaturesSection cards, and/or AboutSection — replacing or supplementing any existing placeholder imagery with these new assets stored in frontend/public/assets/generated.",
+        "id": "REQ-5",
+        "summary": "Replace the landing page Hero section background image with the newly uploaded file `myplace-hero2.jpeg`, used exactly as-is.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/HeroSection.tsx",
-          "frontend/src/components/FeaturesSection.tsx",
-          "frontend/src/components/AboutSection.tsx"
+          "frontend/public/assets/myplace-hero2.jpeg",
+          "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/HeroSection.tsx",
-          "frontend/src/components/FeaturesSection.tsx",
-          "frontend/src/components/AboutSection.tsx"
+          "frontend/src/components/HeroSection.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/about-team.dim_900x700.png",
-    "frontend/public/assets/generated/feature-accommodations.dim_800x600.png",
-    "frontend/public/assets/generated/feature-locations.dim_800x600.png",
-    "frontend/public/assets/generated/feature-personalized.dim_800x600.png",
-    "frontend/public/assets/generated/feature-service.dim_800x600.png",
-    "frontend/public/assets/generated/hero-nano-banana.dim_1920x1080.png",
-    "frontend/src/components/AboutSection.tsx",
-    "frontend/src/components/FeaturesSection.tsx",
     "frontend/src/components/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",

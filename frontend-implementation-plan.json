@@ -1,33 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add Nano Banana property images to the landing page",
+  "title": "Real Estate Landing: Swap hero background image to myplace-hero2.jpeg",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Integrate curated Nano Banana property images into HeroSection, FeaturesSection, and AboutSection, replacing existing placeholder imagery with new assets from frontend/public/assets/generated",
+      "id": "REQ-5",
+      "summary": "Swap the landing page Hero section background to the uploaded myplace-hero2.jpeg and remove any non-image overlays while keeping the Hero layout unchanged.",
       "acceptanceCriteria": [
-        "New images from Nano Banana are displayed in at least the HeroSection and one other section (e.g., FeaturesSection or AboutSection).",
-        "Images are stored as static assets under frontend/public/assets/generated.",
-        "Images match the warm terracotta/earth-tone visual style of the site.",
-        "All images load correctly and are properly sized for their respective sections.",
-        "No broken image links or missing asset references exist after the update."
+        "`frontend/src/components/HeroSection.tsx` uses `myplace-hero2.jpeg` as the hero background image source.",
+        "The new hero image file is included as a static asset under `frontend/public/assets/` (or the project’s existing public assets location) so it loads in production builds.",
+        "No additional visual adjustments are applied to the uploaded image (no overlays/gradients, darkening filters, tint layers, or cropping edits performed outside the existing `object-cover object-center` rendering).",
+        "Hero section height and layout remain unchanged (e.g., still `min-h-screen`, same content positioning and spacing)."
       ],
       "file_operations": [
         {
+          "path": "frontend/public/assets/myplace-hero2.jpeg",
+          "operation": "create",
+          "description": "Add the uploaded hero image as a public static asset so it is available in production builds at `frontend/public/assets/myplace-hero2.jpeg`."
+        },
+        {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Replace the existing background image URL with the new hero image frontend/public/assets/generated/hero-nano-banana.dim_1920x1080.png to display a warm-toned aerial or street-level view of colonial-style residential buildings with terracotta rooftops and lush greenery in Querétaro style."
-        },
-        {
-          "path": "frontend/src/components/FeaturesSection.tsx",
-          "operation": "modify",
-          "description": "Update the four feature cards to display the generated Nano Banana images: frontend/public/assets/generated/feature-accommodations.dim_800x600.png for Premium Accommodations (elegant furnished living room), frontend/public/assets/generated/feature-locations.dim_800x600.png for Prime Locations (charming cobblestone street), frontend/public/assets/generated/feature-service.dim_800x600.png for Trusted Service (welcoming handshake scene), and frontend/public/assets/generated/feature-personalized.dim_800x600.png for Personalized Experience (happy family on terrace). Ensure images are properly sized and maintain the existing card layout structure."
-        },
-        {
-          "path": "frontend/src/components/AboutSection.tsx",
-          "operation": "modify",
-          "description": "Replace the existing about-us-image.jpg with frontend/public/assets/generated/about-team.dim_900x700.png showing a warm portrait-style photo of a professional real estate team in front of a colonial building. Maintain the current two-column grid layout and ensure the image displays properly alongside the company description and trust indicators."
+          "description": "Update the hero background <img> source to `/assets/myplace-hero2.jpeg` and remove the existing gradient/overlay layer so the image is used exactly as-is, while keeping the section structure, height (`min-h-screen`), and layout unchanged."
         }
       ]
     }

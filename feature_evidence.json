@@ -2,11 +2,9 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-source-and-integrate-a-curated-set-of-visually-appealing-property-lifestyle-images-from-nano-banana-https-nanobanana-com-into-the-landing-page-sections-particularly-the-herosection-background-featuressection-cards-and-or-aboutsection-replacing-or-supplementing-any-existing-placeholder-imagery-with-these-new-assets-stored-in-frontend-public-assets-generated",
-      "featureTitle": "Source and integrate a curated set of visually appealing property/lifestyle images from Nano Banana (https://nanobanana.com) into the landing page sections — particularly the HeroSection background, FeaturesSection cards, and/or AboutSection — replacing or supplementing any existing placeholder imagery with these new assets stored in frontend/public/assets/generated.",
+      "featureId": "feature-replace-the-landing-page-hero-section-background-image-with-the-newly-uploaded-file-myplace-hero2-jpeg-used-exactly-as-is",
+      "featureTitle": "Replace the landing page Hero section background image with the newly uploaded file `myplace-hero2.jpeg`, used exactly as-is.",
       "files": [
-        "frontend/src/components/AboutSection.tsx",
-        "frontend/src/components/FeaturesSection.tsx",
         "frontend/src/components/HeroSection.tsx"
       ],
       "components": [
@@ -18,7 +16,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-1"
+        "REQ-5"
       ],
       "confidence": "high"
     }

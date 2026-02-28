@@ -1,50 +1,52 @@
 {
   "kind": "build_request",
-  "title": "Add Nano Banana property images to the landing page",
-  "projectName": "My Place Querétaro",
+  "title": "Replace hero background with uploaded image (no adjustments)",
+  "projectName": "Real Estate Landing",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Source and integrate a curated set of visually appealing property/lifestyle images from Nano Banana (https://nanobanana.com) into the landing page sections — particularly the HeroSection background, FeaturesSection cards, and/or AboutSection — replacing or supplementing any existing placeholder imagery with these new assets stored in frontend/public/assets/generated.",
+      "id": "REQ-5",
+      "text": "Replace the landing page Hero section background image with the newly uploaded file `myplace-hero2.jpeg`, used exactly as-is.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-last"
+          "msg-4",
+          "msg-6"
         ],
         "quotes": [
-          "can you add images from nano banana?"
+          "please use this other image (file attached) for the main hero section, the previous one is not good.",
+          "1.  exactly as‑is"
         ]
       },
       "acceptanceCriteria": [
-        "New images from Nano Banana are displayed in at least the HeroSection and one other section (e.g., FeaturesSection or AboutSection).",
-        "Images are stored as static assets under frontend/public/assets/generated.",
-        "Images match the warm terracotta/earth-tone visual style of the site.",
-        "All images load correctly and are properly sized for their respective sections.",
-        "No broken image links or missing asset references exist after the update."
+        "`frontend/src/components/HeroSection.tsx` uses `myplace-hero2.jpeg` as the hero background image source.",
+        "The new hero image file is included as a static asset under `frontend/public/assets/` (or the project’s existing public assets location) so it loads in production builds.",
+        "No additional visual adjustments are applied to the uploaded image (no overlays/gradients, darkening filters, tint layers, or cropping edits performed outside the existing `object-cover object-center` rendering).",
+        "Hero section height and layout remain unchanged (e.g., still `min-h-screen`, same content positioning and spacing)."
       ]
     }
   ],
   "constraints": [
-    "Do not modify files under frontend/src/hooks/ or frontend/src/components/ui.",
-    "Preserve the existing terracotta and earth-tone color scheme defined in frontend/src/index.css.",
-    "All new images must be served as static assets from frontend/public/assets/generated — do not route them through the backend."
+    "Do not edit files in `frontend/src/components/ui` or other immutable paths listed in SYSTEM_CONTEXT.",
+    "Keep the Hero section layout/height unchanged; only swap the background image and remove any non-image overlays that would alter its appearance."
   ],
   "nonGoals": [
-    "Adding any new backend logic or data models.",
-    "Changing the overall page layout or section structure.",
-    "Replacing the Formspree contact form integration.",
-    "Modifying the Calendly booking widget."
+    "Do not change hero headline/subheadline copy or button behavior.",
+    "Do not change other landing page sections (Features, About, Contact, Schedule, Footer).",
+    "Do not introduce new backend logic or schema changes."
   ],
   "imageRequirements": {
-    "required": [
-      "Warm-toned aerial or street-level view of colonial-style residential buildings with terracotta rooftops and lush greenery, Querétaro style (hero-nano-banana.dim_1920x1080.png)",
-      "Elegant furnished living room interior with warm earth tones, natural light, and modern colonial decor (feature-accommodations.dim_800x600.png)",
-      "Charming cobblestone street or plaza in a colonial Mexican town with colorful facades and blue sky (feature-locations.dim_800x600.png)",
-      "Welcoming handshake or couple meeting a real estate agent in a bright, airy setting (feature-service.dim_800x600.png)",
-      "Happy family or couple enjoying a sunny terrace or courtyard of a Mexican colonial home (feature-personalized.dim_800x600.png)",
-      "Warm portrait-style photo of a professional real estate team in front of a colonial building (about-team.dim_900x700.png)"
-    ],
+    "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }
