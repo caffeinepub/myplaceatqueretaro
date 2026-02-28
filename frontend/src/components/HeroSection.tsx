@@ -6,8 +6,8 @@ export function HeroSection() {
       {/* Hero Image Background */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/myplace-hero2.jpeg"
-          alt="Querétaro cityscape with jacaranda trees"
+          src="/assets/generated/arcos-queretaro-hero.dim_1920x1080.png"
+          alt="Arcos de Querétaro"
           className="w-full h-full object-cover object-center"
         />
       </div>

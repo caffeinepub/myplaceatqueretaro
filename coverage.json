@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-16T21:15:58.705Z",
+  "generatedAt": "2026-02-28T16:59:24.961Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,11 +11,10 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-5",
-        "summary": "Replace the landing page Hero section background image with the newly uploaded file `myplace-hero2.jpeg`, used exactly as-is.",
+        "id": "REQ-1",
+        "summary": "Update the HeroSection component to use the newly generated Arcos de Querétaro image as the full-background hero image, replacing any existing placeholder or previous hero background.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/myplace-hero2.jpeg",
           "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [
@@ -26,9 +25,12 @@
   },
   "changedFiles": [
     "build-request.json",
+    "build-template/README.md",
+    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/public/assets/generated/arcos-queretaro-hero.dim_1920x1080.png",
     "frontend/src/components/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",

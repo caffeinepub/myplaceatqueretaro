@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-replace-the-landing-page-hero-section-background-image-with-the-newly-uploaded-file-myplace-hero2-jpeg-used-exactly-as-is",
-      "featureTitle": "Replace the landing page Hero section background image with the newly uploaded file `myplace-hero2.jpeg`, used exactly as-is.",
+      "featureId": "feature-update-the-herosection-component-to-use-the-newly-generated-arcos-de-quer-taro-image-as-the-full-background-hero-image-replacing-any-existing-placeholder-or-previous-hero-background",
+      "featureTitle": "Update the HeroSection component to use the newly generated Arcos de Querétaro image as the full-background hero image, replacing any existing placeholder or previous hero background.",
       "files": [
         "frontend/src/components/HeroSection.tsx"
       ],
@@ -16,7 +16,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-5"
+        "REQ-1"
       ],
       "confidence": "high"
     }

@@ -1,27 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Real Estate Landing: Swap hero background image to myplace-hero2.jpeg",
+  "title": "Replace hero background with Arcos de Querétaro image",
   "requirements": [
     {
-      "id": "REQ-5",
-      "summary": "Swap the landing page Hero section background to the uploaded myplace-hero2.jpeg and remove any non-image overlays while keeping the Hero layout unchanged.",
+      "id": "REQ-1",
+      "summary": "Update the HeroSection component to use the newly generated Arcos de Querétaro image as the full-background hero image",
       "acceptanceCriteria": [
-        "`frontend/src/components/HeroSection.tsx` uses `myplace-hero2.jpeg` as the hero background image source.",
-        "The new hero image file is included as a static asset under `frontend/public/assets/` (or the project’s existing public assets location) so it loads in production builds.",
-        "No additional visual adjustments are applied to the uploaded image (no overlays/gradients, darkening filters, tint layers, or cropping edits performed outside the existing `object-cover object-center` rendering).",
-        "Hero section height and layout remain unchanged (e.g., still `min-h-screen`, same content positioning and spacing)."
+        "The hero section displays the Arcos de Querétaro image as a full-width, full-height background.",
+        "The image is served from frontend/public/assets/generated/arcos-queretaro-hero.dim_1920x1080.png.",
+        "No previous hero background image or placeholder is visible."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/myplace-hero2.jpeg",
-          "operation": "create",
-          "description": "Add the uploaded hero image as a public static asset so it is available in production builds at `frontend/public/assets/myplace-hero2.jpeg`."
-        },
-        {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update the hero background <img> source to `/assets/myplace-hero2.jpeg` and remove the existing gradient/overlay layer so the image is used exactly as-is, while keeping the section structure, height (`min-h-screen`), and layout unchanged."
+          "description": "Update the background image styling to reference the generated Arcos de Querétaro image at frontend/public/assets/generated/arcos-queretaro-hero.dim_1920x1080.png. Replace any existing background image URL or inline style with the new asset path. Ensure the image displays as a full-width, full-height background with appropriate object-fit and positioning to maintain visual quality across all viewport sizes."
         }
       ]
     }
