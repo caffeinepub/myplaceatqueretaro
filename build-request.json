@@ -1,41 +1,42 @@
 {
   "kind": "build_request",
-  "title": "Replace hero background with Arcos de Querétaro image",
-  "projectName": "Querétaro Colonial",
+  "title": "Replace hero background with uploaded Querétaro aqueduct image",
+  "projectName": "MyPlace at Querétaro",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update the HeroSection component to use the newly generated Arcos de Querétaro image as the full-background hero image, replacing any existing placeholder or previous hero background.",
+      "text": "Save the uploaded image (new-qro-main.jpeg) as the static asset at frontend/public/assets/generated/new-qro-main.jpeg and use it as the background image in the HeroSection component, replacing the current background image. The image should cover the full viewport with object-fit cover and be centered.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-recent"
+          "msg-1"
         ],
         "quotes": [
-          "solo pon la nueva imagen por favor"
+          "favor de usar la imagen como fondo principal"
         ]
       },
       "acceptanceCriteria": [
-        "The hero section displays the Arcos de Querétaro image as a full-width, full-height background.",
-        "The image is served from frontend/public/assets/generated/arcos-queretaro-hero.dim_1920x1080.png.",
-        "No previous hero background image or placeholder is visible."
+        "The file new-qro-main.jpeg is placed at frontend/public/assets/generated/new-qro-main.jpeg",
+        "HeroSection renders the new Querétaro aqueduct image as its full-screen background",
+        "The image covers the entire hero area (background-size: cover, background-position: center)",
+        "No previous background image is referenced in HeroSection"
       ]
     }
   ],
   "constraints": [
-    "Do not change any backend logic.",
-    "Do not modify files listed in frontend.immutablePaths."
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui",
+    "Only the hero section background image should change — no other layout or style changes"
   ],
   "nonGoals": [
-    "Adding new sections or features to the landing page.",
-    "Changing the overall layout or color theme.",
-    "Any backend changes."
+    "Changing any other section backgrounds",
+    "Modifying color theme or typography",
+    "Adding overlay effects unless already present in the current HeroSection implementation"
   ],
   "imageRequirements": {
-    "required": [
-      "Full-width panoramic photograph of the Arcos de Querétaro aqueduct landmark, warm golden-hour lighting, stone arches in the foreground, colonial city backdrop (arcos-queretaro-hero.dim_1920x1080.png)"
-    ],
-    "edits": []
+    "required": [],
+    "edits": [
+      "Use the uploaded file as-is, saved to the project as (new-qro-main.jpeg)"
+    ]
   }
 }

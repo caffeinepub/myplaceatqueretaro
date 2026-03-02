@@ -1,10 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the current hero background in the HeroSection component with a new Arcos de Querétaro image.
+**Goal:** Replace the current HeroSection background image with the uploaded Querétaro aqueduct photo (new-qro-main.jpeg).
 
 **Planned changes:**
-- Update the HeroSection component to use `generated/arcos-queretaro-hero.dim_1920x1080.png` as the full-width, full-height background image.
-- Remove any previous hero background image or placeholder.
+- Save `new-qro-main.jpeg` as a static asset at `frontend/public/assets/generated/new-qro-main.jpeg`
+- Update the HeroSection component to use `new-qro-main.jpeg` as its background image with `background-size: cover` and `background-position: center`
+- Remove any reference to the previous background image in HeroSection
 
-**User-visible outcome:** The hero section displays the Arcos de Querétaro aqueduct image as its background.
+**User-visible outcome:** The hero section displays the Querétaro aqueduct with jacaranda trees as its full-screen background image.

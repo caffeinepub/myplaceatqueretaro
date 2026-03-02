@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-update-the-herosection-component-to-use-the-newly-generated-arcos-de-quer-taro-image-as-the-full-background-hero-image-replacing-any-existing-placeholder-or-previous-hero-background",
-      "featureTitle": "Update the HeroSection component to use the newly generated Arcos de Querétaro image as the full-background hero image, replacing any existing placeholder or previous hero background.",
+      "featureId": "feature-save-the-uploaded-image-new-qro-main-jpeg-as-the-static-asset-at-frontend-public-assets-generated-new-qro-main-jpeg-and-use-it-as-the-background-image-in-the-herosection-component-replacing-the-current-background-image-the-image-should-cover-the-full-viewport-with-object-fit-cover-and-be-centered",
+      "featureTitle": "Save the uploaded image (new-qro-main.jpeg) as the static asset at frontend/public/assets/generated/new-qro-main.jpeg and use it as the background image in the HeroSection component, replacing the current background image. The image should cover the full viewport with object-fit cover and be centered.",
       "files": [
         "frontend/src/components/HeroSection.tsx"
       ],

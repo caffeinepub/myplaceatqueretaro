@@ -1,21 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace hero background with Arcos de Querétaro image",
+  "title": "Replace hero background with uploaded Querétaro aqueduct image",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Update the HeroSection component to use the newly generated Arcos de Querétaro image as the full-background hero image",
+      "summary": "Replace the HeroSection background image with the uploaded Querétaro aqueduct photo (new-qro-main.jpeg)",
       "acceptanceCriteria": [
-        "The hero section displays the Arcos de Querétaro image as a full-width, full-height background.",
-        "The image is served from frontend/public/assets/generated/arcos-queretaro-hero.dim_1920x1080.png.",
-        "No previous hero background image or placeholder is visible."
+        "The file new-qro-main.jpeg is placed at frontend/public/assets/generated/new-qro-main.jpeg",
+        "HeroSection renders the new Querétaro aqueduct image as its full-screen background",
+        "The image covers the entire hero area (background-size: cover, background-position: center)",
+        "No previous background image is referenced in HeroSection"
       ],
       "file_operations": [
         {
+          "path": "frontend/public/assets/generated/new-qro-main.jpeg",
+          "operation": "create",
+          "description": "Save the uploaded Querétaro aqueduct image (new-qro-main.jpeg) as a static asset at this exact path. This image shows the historic aqueduct with jacaranda trees and will serve as the new hero background."
+        },
+        {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Update the background image styling to reference the generated Arcos de Querétaro image at frontend/public/assets/generated/arcos-queretaro-hero.dim_1920x1080.png. Replace any existing background image URL or inline style with the new asset path. Ensure the image displays as a full-width, full-height background with appropriate object-fit and positioning to maintain visual quality across all viewport sizes."
+          "description": "Update the background image reference to use the exact workspace path frontend/public/assets/generated/new-qro-main.jpeg. Replace any existing background image URL or path. Ensure the styling maintains full viewport coverage with background-size: cover and background-position: center. Do not modify any other layout, overlay effects, text, or CTA button behavior."
         }
       ]
     }

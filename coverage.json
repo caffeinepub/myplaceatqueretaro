@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-28T16:59:24.961Z",
+  "generatedAt": "2026-03-01T20:59:03.823Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,9 +12,10 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Update the HeroSection component to use the newly generated Arcos de Querétaro image as the full-background hero image, replacing any existing placeholder or previous hero background.",
+        "summary": "Save the uploaded image (new-qro-main.jpeg) as the static asset at frontend/public/assets/generated/new-qro-main.jpeg and use it as the background image in the HeroSection component, replacing the current background image. The image should cover the full viewport with object-fit cover and be centered.",
         "status": "implemented",
         "plannedFiles": [
+          "frontend/public/assets/generated/new-qro-main.jpeg",
           "frontend/src/components/HeroSection.tsx"
         ],
         "matchedFiles": [
@@ -25,12 +26,9 @@
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/arcos-queretaro-hero.dim_1920x1080.png",
     "frontend/src/components/HeroSection.tsx",
     "project_state.json",
     "scratch/component-selection.json",

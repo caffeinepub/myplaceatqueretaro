@@ -1,33 +1,25 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "User is building a website (likely tourism/landing page for Querétaro) and wants a hero section with a full-background image of Arcos de Querétaro. Repeated deployment errors and draft expiration issues have been occurring.",
-  "architectural_notes": [],
-  "known_issues": [
-    "Repeated deployment errors and draft app expiration issues are blocking progress"
+  "summary": "Project with a background image applied as the main background.",
+  "architectural_notes": [
+    "Main background uses a user-provided image as the primary background."
   ],
+  "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Full-width panoramic photograph of the Arcos de Querétaro aqueduct landmark, warm golden-hour lighting, stone arches in the foreground, colonial city backdrop (arcos-queretaro-hero.dim_1920x1080.png)",
+  "imageRequirements": "## Edit Images\n- Use the uploaded file as-is, saved to the project as (new-qro-main.jpeg)",
   "existing_features": [
     {
-      "id": "feature-update-the-herosection-component-to-use-the-newly-generated-arcos-de-quer-taro-image-as-the-full-background-hero-image-replacing-any-existing-placeholder-or-previous-hero-background",
-      "title": "Update the HeroSection component to use the newly generated Arcos de Querétaro image as the full-background hero image, replacing any existing placeholder or previous hero background.",
+      "id": "feature-save-the-uploaded-image-new-qro-main-jpeg-as-the-static-asset-at-frontend-public-assets-generated-new-qro-main-jpeg-and-use-it-as-the-background-image-in-the-herosection-component-replacing-the-current-background-image-the-image-should-cover-the-full-viewport-with-object-fit-cover-and-be-centered",
+      "title": "Save the uploaded image (new-qro-main.jpeg) as the static asset at frontend/public/assets/generated/new-qro-main.jpeg and use it as the background image in the HeroSection component, replacing the current background image. The image should cover the full viewport with object-fit cover and be centered.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Add full-background hero image (Arcos de Querétaro photo) to the site",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
-  "gameProjectType": "none",
-  "projectName": "Querétaro Colonial",
+  "new_feature_requests": [],
+  "projectName": "MyPlace at Querétaro",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
