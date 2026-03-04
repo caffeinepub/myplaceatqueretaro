@@ -1,26 +1,30 @@
-import { Home, MapPin, Shield, Star } from 'lucide-react';
+import { Home, MapPin, Shield, Star } from "lucide-react";
 
 export function FeaturesSection() {
   const features = [
     {
       icon: Home,
-      title: 'Premium Accommodations',
-      description: 'Carefully curated properties that combine comfort, style, and authentic Mexican hospitality for an unforgettable stay.',
+      title: "Premium Accommodations",
+      description:
+        "Carefully curated properties that combine comfort, style, and authentic Mexican hospitality for an unforgettable stay.",
     },
     {
       icon: MapPin,
-      title: 'Prime Locations',
-      description: 'Strategic locations throughout Querétaro, from the historic center to modern residential areas, ensuring convenience and accessibility.',
+      title: "Prime Locations",
+      description:
+        "Strategic locations throughout Querétaro, from the historic center to modern residential areas, ensuring convenience and accessibility.",
     },
     {
       icon: Shield,
-      title: 'Trusted Service',
-      description: 'Years of experience in the local market with a commitment to transparency, reliability, and exceptional customer care.',
+      title: "Trusted Service",
+      description:
+        "Years of experience in the local market with a commitment to transparency, reliability, and exceptional customer care.",
     },
     {
       icon: Star,
-      title: 'Personalized Experience',
-      description: 'We provide tailored solutions that match your unique needs, whether you\'re looking to rent or invest for the long term.',
+      title: "Personalized Experience",
+      description:
+        "We provide tailored solutions that match your unique needs, whether you're looking to rent or invest for the long term.",
     },
   ];
 
@@ -32,7 +36,8 @@ export function FeaturesSection() {
             Why Choose Us
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            We provide exceptional service and unmatched local expertise to make your Querétaro experience extraordinary
+            We provide exceptional service and unmatched local expertise to make
+            your Querétaro experience extraordinary
           </p>
           <a
             href="https://www.youtube.com/watch?v=68lltMKke6E"
@@ -45,11 +50,11 @@ export function FeaturesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {features.map((feature, index) => {
+          {features.map((feature) => {
             const Icon = feature.icon;
             return (
               <div
-                key={index}
+                key={feature.title}
                 className="bg-card rounded-xl p-6 md:p-8 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">

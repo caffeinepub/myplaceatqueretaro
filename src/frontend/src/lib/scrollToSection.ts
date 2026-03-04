@@ -4,14 +4,14 @@
  */
 export function scrollToSection(sectionId: string): void {
   const element = document.getElementById(sectionId);
-  
+
   if (!element) {
     console.warn(`Section with id "${sectionId}" not found`);
     return;
   }
 
   // Get header height for offset
-  const header = document.querySelector('header');
+  const header = document.querySelector("header");
   const headerHeight = header ? header.offsetHeight : 0;
 
   // Calculate position with offset
@@ -21,6 +21,6 @@ export function scrollToSection(sectionId: string): void {
   // Smooth scroll to position
   window.scrollTo({
     top: offsetPosition,
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 }

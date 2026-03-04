@@ -1,14 +1,17 @@
 export function ContactForm() {
   return (
     <div className="bg-card rounded-xl p-6 md:p-8 shadow-soft">
-      <form 
-        action="https://formspree.io/f/xkgelwgw" 
-        method="POST" 
+      <form
+        action="https://formspree.io/f/xkgelwgw"
+        method="POST"
         className="space-y-6"
       >
         {/* Name Field */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-foreground mb-2"
+          >
             Name *
           </label>
           <input
@@ -23,7 +26,10 @@ export function ContactForm() {
 
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-foreground mb-2"
+          >
             Email *
           </label>
           <input
@@ -38,7 +44,10 @@ export function ContactForm() {
 
         {/* Phone Field */}
         <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+          <label
+            htmlFor="phone"
+            className="block text-sm font-medium text-foreground mb-2"
+          >
             Phone *
           </label>
           <input
@@ -53,7 +62,10 @@ export function ContactForm() {
 
         {/* Message Field */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-foreground mb-2"
+          >
             Message *
           </label>
           <textarea

@@ -1,33 +1,45 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
-import { SiFacebook, SiInstagram, SiYoutube } from 'react-icons/si';
-import { ContactForm } from './ContactForm';
+import { Mail, MapPin, Phone } from "lucide-react";
+import { SiFacebook, SiInstagram, SiYoutube } from "react-icons/si";
+import { ContactForm } from "./ContactForm";
 
 export function ContactSection() {
   const contactDetails = [
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+52 (442)  232 1248',
-      href: 'tel:+524422321248',
+      label: "Phone",
+      value: "+52 (442)  232 1248",
+      href: "tel:+524422321248",
     },
     {
       icon: Mail,
-      label: 'Email',
-      value: 'contactus@myplaceatqueretaro.com',
-      href: 'mailto:contactus@myplaceatqueretaro.com',
+      label: "Email",
+      value: "contactus@myplaceatqueretaro.com",
+      href: "mailto:contactus@myplaceatqueretaro.com",
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'Querétaro, Qro., Mexico',
-      href: '#',
+      label: "Location",
+      value: "Querétaro, Qro., Mexico",
+      href: "#",
     },
   ];
 
   const socialLinks = [
-    { icon: SiFacebook, label: 'Facebook', href: 'https://www.facebook.com/MyPlaceAtQueretaro' },
-    { icon: SiInstagram, label: 'Instagram', href: 'https://www.instagram.com/myplaceatqueretaro' },
-    { icon: SiYoutube, label: 'YouTube', href: 'https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2' },
+    {
+      icon: SiFacebook,
+      label: "Facebook",
+      href: "https://www.facebook.com/MyPlaceAtQueretaro",
+    },
+    {
+      icon: SiInstagram,
+      label: "Instagram",
+      href: "https://www.instagram.com/myplaceatqueretaro",
+    },
+    {
+      icon: SiYoutube,
+      label: "YouTube",
+      href: "https://youtube.com/@myplaceatqueretaro?si=FI8rt31Wp4dxLMY2",
+    },
   ];
 
   return (
@@ -38,7 +50,8 @@ export function ContactSection() {
             Contact us
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to find your perfect place in Querétaro? We're here to help you every step of the way
+            Ready to find your perfect place in Querétaro? We're here to help
+            you every step of the way
           </p>
         </div>
 
@@ -55,11 +68,11 @@ export function ContactSection() {
                 Contact Information
               </h3>
               <div className="space-y-4">
-                {contactDetails.map((detail, index) => {
+                {contactDetails.map((detail) => {
                   const Icon = detail.icon;
                   return (
                     <a
-                      key={index}
+                      key={detail.label}
                       href={detail.href}
                       className="flex items-start space-x-4 p-4 rounded-lg hover:bg-card transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
@@ -86,11 +99,11 @@ export function ContactSection() {
                 Follow Us
               </h3>
               <div className="flex space-x-4">
-                {socialLinks.map((social, index) => {
+                {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
                     <a
-                      key={index}
+                      key={social.label}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"

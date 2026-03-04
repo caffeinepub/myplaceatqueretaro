@@ -1,21 +1,21 @@
-import { Award, Clock, Users } from 'lucide-react';
+import { Award, Clock, Users } from "lucide-react";
 
 export function AboutSection() {
   const trustIndicators = [
     {
       icon: Clock,
-      value: '36+',
-      label: 'Years of Experience',
+      value: "36+",
+      label: "Years of Experience",
     },
     {
       icon: Users,
-      value: '500+ per year',
-      label: 'Happy Clients',
+      value: "500+ per year",
+      label: "Happy Clients",
     },
     {
       icon: Award,
-      value: '98%',
-      label: 'Satisfaction Rate',
+      value: "98%",
+      label: "Satisfaction Rate",
     },
   ];
 
@@ -30,16 +30,19 @@ export function AboutSection() {
             </h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Our Commitment is simple: to make your Queretaro experience exceptional from start to finish. We can handle every detail with care, ensuring your journey is smooth, enjoyable,  and perfectly tailored to your needs.
+                Our Commitment is simple: to make your Queretaro experience
+                exceptional from start to finish. We can handle every detail
+                with care, ensuring your journey is smooth, enjoyable, and
+                perfectly tailored to your needs.
               </p>
             </div>
 
             {/* Trust Indicators */}
             <div className="grid grid-cols-3 gap-6 mt-10">
-              {trustIndicators.map((indicator, index) => {
+              {trustIndicators.map((indicator) => {
                 const Icon = indicator.icon;
                 return (
-                  <div key={index} className="text-center">
+                  <div key={indicator.label} className="text-center">
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-3">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
