@@ -1,17 +1,14 @@
 {
   "schemaVersion": "1.0.0",
   "projectStateVersion": 3,
-  "summary": "Project with a background image applied as the main background.",
-  "architectural_notes": [
-    "Main background uses a user-provided image as the primary background."
-  ],
+  "summary": "New project",
+  "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Edit Images\n- Use the uploaded file as-is, saved to the project as (new-qro-main.jpeg)",
   "existing_features": [
     {
-      "id": "feature-save-the-uploaded-image-new-qro-main-jpeg-as-the-static-asset-at-frontend-public-assets-generated-new-qro-main-jpeg-and-use-it-as-the-background-image-in-the-herosection-component-replacing-the-current-background-image-the-image-should-cover-the-full-viewport-with-object-fit-cover-and-be-centered",
-      "title": "Save the uploaded image (new-qro-main.jpeg) as the static asset at frontend/public/assets/generated/new-qro-main.jpeg and use it as the background image in the HeroSection component, replacing the current background image. The image should cover the full viewport with object-fit cover and be centered.",
+      "id": "feature-update-the-footer-component-s-background-color-to-exactly-match-the-background-color-used-by-the-landingheader-component-ensuring-visual-consistency-between-the-two",
+      "title": "Update the Footer component's background color to exactly match the background color used by the LandingHeader component, ensuring visual consistency between the two.",
       "reqIds": [
         "REQ-1"
       ],
@@ -19,7 +16,7 @@
     }
   ],
   "new_feature_requests": [],
-  "projectName": "MyPlace at Querétaro",
+  "projectName": "Match footer background color to header background color",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

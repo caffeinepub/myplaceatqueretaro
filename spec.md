@@ -1,11 +1,9 @@
 # Specification
 
 ## Summary
-**Goal:** Replace the current HeroSection background image with the uploaded Querétaro aqueduct photo (new-qro-main.jpeg).
+**Goal:** Match the footer background color to the header background color for visual consistency.
 
 **Planned changes:**
-- Save `new-qro-main.jpeg` as a static asset at `frontend/public/assets/generated/new-qro-main.jpeg`
-- Update the HeroSection component to use `new-qro-main.jpeg` as its background image with `background-size: cover` and `background-position: center`
-- Remove any reference to the previous background image in HeroSection
+- Update the Footer component's background color to exactly match the LandingHeader component's background color.
 
-**User-visible outcome:** The hero section displays the Querétaro aqueduct with jacaranda trees as its full-screen background image.
+**User-visible outcome:** The footer and header will share the same background color, creating a visually consistent look across the top and bottom of the page.

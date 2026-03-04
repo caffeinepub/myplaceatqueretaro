@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-03-01T20:59:03.823Z",
+  "generatedAt": "2026-03-02T18:12:56.167Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -12,14 +12,13 @@
     "items": [
       {
         "id": "REQ-1",
-        "summary": "Save the uploaded image (new-qro-main.jpeg) as the static asset at frontend/public/assets/generated/new-qro-main.jpeg and use it as the background image in the HeroSection component, replacing the current background image. The image should cover the full viewport with object-fit cover and be centered.",
+        "summary": "Update the Footer component's background color to exactly match the background color used by the LandingHeader component, ensuring visual consistency between the two.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/generated/new-qro-main.jpeg",
-          "frontend/src/components/HeroSection.tsx"
+          "frontend/src/components/Footer.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/HeroSection.tsx"
+          "frontend/src/components/Footer.tsx"
         ]
       }
     ]
@@ -29,7 +28,7 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/Footer.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

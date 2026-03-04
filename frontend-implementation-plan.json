@@ -1,27 +1,21 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Replace hero background with uploaded Querétaro aqueduct image",
+  "title": "Match footer background color to header background color",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Replace the HeroSection background image with the uploaded Querétaro aqueduct photo (new-qro-main.jpeg)",
+      "summary": "Update the Footer component's background color to exactly match the LandingHeader component's background color for visual consistency",
       "acceptanceCriteria": [
-        "The file new-qro-main.jpeg is placed at frontend/public/assets/generated/new-qro-main.jpeg",
-        "HeroSection renders the new Querétaro aqueduct image as its full-screen background",
-        "The image covers the entire hero area (background-size: cover, background-position: center)",
-        "No previous background image is referenced in HeroSection"
+        "The footer background color is visually identical to the header background color.",
+        "The footer's existing content (logo, links, copyright, attribution) remains fully visible and readable against the new background.",
+        "No other footer styles (padding, spacing, font sizes) are changed."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/new-qro-main.jpeg",
-          "operation": "create",
-          "description": "Save the uploaded Querétaro aqueduct image (new-qro-main.jpeg) as a static asset at this exact path. This image shows the historic aqueduct with jacaranda trees and will serve as the new hero background."
-        },
-        {
-          "path": "frontend/src/components/HeroSection.tsx",
+          "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Update the background image reference to use the exact workspace path frontend/public/assets/generated/new-qro-main.jpeg. Replace any existing background image URL or path. Ensure the styling maintains full viewport coverage with background-size: cover and background-position: center. Do not modify any other layout, overlay effects, text, or CTA button behavior."
+          "description": "Update the Footer component's background color className to match the LandingHeader component's background. Review the LandingHeader component to identify its exact background color class, then apply the same background color class to the Footer's root element while preserving all other existing styles, content structure, and spacing."
         }
       ]
     }

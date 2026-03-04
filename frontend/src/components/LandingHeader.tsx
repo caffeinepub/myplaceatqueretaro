@@ -33,8 +33,9 @@ export function LandingHeader() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center min-h-[141px] md:min-h-[166px] py-4">
-          {/* Logo */}
+        {/* Reduced height by ~20%: 141→113px base, 166→133px md */}
+        <div className="flex items-center min-h-[113px] md:min-h-[133px] py-3">
+          {/* Logo — reduced by ~20%: 128→102px base, 154→123px md */}
           <button
             onClick={() => scrollToSection('hero')}
             className="flex-shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground rounded-md px-2 py-1"
@@ -43,24 +44,24 @@ export function LandingHeader() {
             <img
               src="/assets/Logo_Myplace_moslygraytransparent-1.png"
               alt="My Place at Querétaro logo"
-              className="h-[128px] md:h-[154px] w-auto object-contain"
+              className="h-[102px] md:h-[123px] w-auto object-contain"
             />
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 ml-6">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 ml-5">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="px-4 py-2 text-header-foreground hover:text-accent transition-colors font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground rounded-md"
+                className="px-3 py-1.5 text-header-foreground hover:text-accent transition-colors font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground rounded-md"
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('schedule-consultation')}
-              className="ml-4 px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-all shadow-soft hover:shadow-soft-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+              className="ml-3 px-5 py-2.5 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-all shadow-soft hover:shadow-soft-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
             >
               Book
             </button>
@@ -69,30 +70,30 @@ export function LandingHeader() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden ml-auto p-3 text-header-foreground hover:text-accent transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground rounded-md"
+            className="md:hidden ml-auto p-2.5 text-header-foreground hover:text-accent transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground rounded-md"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}
           >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden pb-6 animate-slide-in max-h-[60vh] overflow-y-auto overflow-x-hidden">
-            <div className="flex flex-col space-y-2">
+          <nav className="md:hidden pb-5 animate-slide-in max-h-[60vh] overflow-y-auto overflow-x-hidden">
+            <div className="flex flex-col space-y-1.5">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="px-4 py-3 text-left text-header-foreground hover:text-accent hover:bg-header/50 transition-colors font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground min-h-[44px]"
+                  className="px-4 py-2.5 text-left text-header-foreground hover:text-accent hover:bg-header/50 transition-colors font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground min-h-[44px]"
                 >
                   {item.label}
                 </button>
               ))}
               <button
                 onClick={() => handleNavClick('schedule-consultation')}
-                className="mx-4 mt-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-all shadow-soft text-center min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                className="mx-4 mt-1.5 px-5 py-2.5 bg-accent text-accent-foreground rounded-lg font-semibold hover:bg-accent/90 transition-all shadow-soft text-center min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
               >
                 Book
               </button>

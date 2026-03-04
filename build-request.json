@@ -1,42 +1,38 @@
 {
   "kind": "build_request",
-  "title": "Replace hero background with uploaded Querétaro aqueduct image",
-  "projectName": "MyPlace at Querétaro",
+  "title": "Match footer background color to header background color",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Save the uploaded image (new-qro-main.jpeg) as the static asset at frontend/public/assets/generated/new-qro-main.jpeg and use it as the background image in the HeroSection component, replacing the current background image. The image should cover the full viewport with object-fit cover and be centered.",
+      "text": "Update the Footer component's background color to exactly match the background color used by the LandingHeader component, ensuring visual consistency between the two.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "favor de usar la imagen como fondo principal"
+          "use the same header background color to replace the color for the footer background"
         ]
       },
       "acceptanceCriteria": [
-        "The file new-qro-main.jpeg is placed at frontend/public/assets/generated/new-qro-main.jpeg",
-        "HeroSection renders the new Querétaro aqueduct image as its full-screen background",
-        "The image covers the entire hero area (background-size: cover, background-position: center)",
-        "No previous background image is referenced in HeroSection"
+        "The footer background color is visually identical to the header background color.",
+        "The footer's existing content (logo, links, copyright, attribution) remains fully visible and readable against the new background.",
+        "No other footer styles (padding, spacing, font sizes) are changed."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui",
-    "Only the hero section background image should change — no other layout or style changes"
+    "Do not change any other footer styles — only the background color.",
+    "Do not modify files listed in frontend.immutablePaths."
   ],
   "nonGoals": [
-    "Changing any other section backgrounds",
-    "Modifying color theme or typography",
-    "Adding overlay effects unless already present in the current HeroSection implementation"
+    "Changing any header styles.",
+    "Altering footer padding, spacing, or font sizes.",
+    "Modifying any other section's colors."
   ],
   "imageRequirements": {
     "required": [],
-    "edits": [
-      "Use the uploaded file as-is, saved to the project as (new-qro-main.jpeg)"
-    ]
+    "edits": []
   }
 }
