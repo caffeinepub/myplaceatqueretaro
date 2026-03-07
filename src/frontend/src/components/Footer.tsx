@@ -22,7 +22,10 @@ export function Footer() {
       : "myplaceatqueretaro";
 
   return (
-    <footer className="bg-header border-t border-footer-foreground/10">
+    <footer
+      style={{ backgroundColor: "#9B3E2A" }}
+      className="border-t border-footer-foreground/10"
+    >
       <div className="container mx-auto px-4 py-8 md:py-11">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6">
           {/* Brand */}
@@ -34,10 +37,7 @@ export function Footer() {
                 className="h-[90px] md:h-[108px] w-auto object-contain"
               />
             </div>
-            <p
-              className="text-sm leading-relaxed"
-              style={{ color: "oklch(0.92 0.04 60)" }}
-            >
+            <p className="text-footer-foreground/80 text-sm leading-relaxed">
               Your trusted partner for exceptional real estate, and settling in
               services at Querétaro, Mexico.
             </p>

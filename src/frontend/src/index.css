@@ -30,11 +30,11 @@
     --ring: 0.55 0.15 25;
     --success: 0.65 0.15 145;
     --success-foreground: 0.98 0.01 40;
-    /* Darker terracotta for header background */
+    /* Dark terracotta/burnt orange — #9B3E2A */
     --header: 0.48 0.16 25;
     --header-foreground: 0.98 0.01 40;
-    /* Burgundy/terracotta red for footer background */
-    --footer: 0.42 0.18 20;
+    /* Dark terracotta/burnt orange for footer — #9B3E2A */
+    --footer: 0.48 0.16 25;
     --footer-foreground: 0.98 0.01 40;
   }
 
@@ -60,11 +60,11 @@
     --ring: 0.65 0.15 25;
     --success: 0.65 0.15 145;
     --success-foreground: 0.98 0.01 40;
-    /* Darker terracotta for header background in dark mode */
-    --header: 0.4 0.14 25;
+    /* Dark terracotta/burnt orange in dark mode — #9B3E2A */
+    --header: 0.42 0.16 25;
     --header-foreground: 0.98 0.01 40;
-    /* Burgundy/terracotta red for footer background in dark mode */
-    --footer: 0.35 0.16 20;
+    /* Dark terracotta/burnt orange for footer in dark mode */
+    --footer: 0.42 0.16 25;
     --footer-foreground: 0.98 0.01 40;
   }
 

@@ -28,9 +28,10 @@ export function LandingHeader() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-header/95 ${
-        isScrolled ? "backdrop-blur-md shadow-soft" : ""
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "shadow-soft" : ""
       }`}
+      style={{ backgroundColor: "#9B3E2A" }}
     >
       <div className="container mx-auto px-4">
         {/* Reduced height by ~20%: 141→113px base, 166→133px md */}
@@ -91,7 +92,7 @@ export function LandingHeader() {
                   type="button"
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="px-4 py-2.5 text-left text-header-foreground hover:text-accent hover:bg-header/50 transition-colors font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground min-h-[44px]"
+                  className="px-4 py-2.5 text-left text-header-foreground hover:text-accent hover:bg-white/10 transition-colors font-medium rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-header-foreground min-h-[44px]"
                 >
                   {item.label}
                 </button>

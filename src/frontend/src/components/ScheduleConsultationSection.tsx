@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { scrollToSection } from "../lib/scrollToSection";
 
 export function ScheduleConsultationSection() {

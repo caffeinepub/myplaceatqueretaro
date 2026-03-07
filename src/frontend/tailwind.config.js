@@ -60,11 +60,11 @@ export default {
                     foreground: 'oklch(var(--success-foreground))'
                 },
                 header: {
-                    DEFAULT: 'oklch(var(--header) / <alpha-value>)',
+                    DEFAULT: 'oklch(var(--header))',
                     foreground: 'oklch(var(--header-foreground))'
                 },
                 footer: {
-                    DEFAULT: 'oklch(var(--footer) / <alpha-value>)',
+                    DEFAULT: 'oklch(var(--footer))',
                     foreground: 'oklch(var(--footer-foreground))'
                 }
             },
