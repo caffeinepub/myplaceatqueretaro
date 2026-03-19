@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import { SiFacebook, SiInstagram, SiYoutube } from "react-icons/si";
+import { SiFacebook, SiInstagram, SiWhatsapp, SiYoutube } from "react-icons/si";
 import { ContactForm } from "./ContactForm";
 
 export function ContactSection() {
@@ -21,6 +21,12 @@ export function ContactSection() {
       label: "Location",
       value: "Querétaro, Qro., Mexico",
       href: "#",
+    },
+    {
+      icon: SiWhatsapp,
+      label: "WhatsApp",
+      value: "+52 (442) 232 12 48",
+      href: "https://wa.me/524422321248",
     },
   ];
 
@@ -74,6 +80,14 @@ export function ContactSection() {
                     <a
                       key={detail.label}
                       href={detail.href}
+                      target={
+                        detail.href.startsWith("https") ? "_blank" : undefined
+                      }
+                      rel={
+                        detail.href.startsWith("https")
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
                       className="flex items-start space-x-4 p-4 rounded-lg hover:bg-card transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">

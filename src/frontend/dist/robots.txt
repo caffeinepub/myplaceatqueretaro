@@ -1,0 +1,14 @@
+# SEO-friendly robots.txt
+# Allow specified crawlers to access all paths
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: *
+Allow: /
